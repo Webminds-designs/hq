@@ -17,16 +17,16 @@ const Hero = () => {
    
     </div>
      {/* --- Bottom Layer: Wave Background --- */}
-      <div className="absolute inset-0 top-20 z-10">
+      <div className="absolute inset-0 top-[45%] z-10">
         <WaveCanvas />
       </div>
        {/* --- Top Layer: Text Content --- */}
-      <div className="relative z-20 -top-36 h-full flex flex-col justify-end pb-10 px-8 text-white">
-        <h1 className="text-4xl md:text-7xl font-avengenz">HQ ENTERTAINMENT</h1>
-        <p className="font-avenir font-light md:text-xl mt-4">
+      <div className="relative z-20 -top-42 h-full flex flex-col justify-end pb-10 px-8 text-white">
+        <h1 className="text-4xl md:text-8xl font-avengenz">HQ ENTERTAINMENT</h1>
+        <p className="font-avenir font-light md:text-[25px] mt-4">
           Igniting <em className="italic">Unforgettable</em> moments Through Entertainment
         </p>
-        <div className="text-xs mt-6 flex justify-between w-full max-w-lg text-white/80">
+        <div className="text-xl mt-6 flex justify-between w-full max-w-2xl text-white/80">
           <span>©2025</span>
           <span>BASED IN SL</span>
           <span>EXPERIENCE CURATORS</span>

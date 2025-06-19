@@ -128,4 +128,5 @@
 body {
   background: #0f0f10;
   color: #fefefe;
+  overflow-x: hidden;
 }

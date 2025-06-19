@@ -16,9 +16,17 @@ export default function Home() {
         FONT 02 :- `font-avenir font-light`
       </h1>
        */}
+       <div className="relative z-20">
       <Hero />
-     <SelectedWorks />
-     <Gallery />
+      </div>
+    <div className="relative z-10">
+  <SelectedWorks />
+</div>
+
+<div className="relative z-0 mt-30">
+  <Gallery />
+</div>
+
     
     </div>
   );

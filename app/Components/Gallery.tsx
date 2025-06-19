@@ -4,7 +4,9 @@ import React, { useRef, useEffect } from "react";
 import Image from "next/image";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
+import type { StaticImageData } from "next/image";
 
+// Import images
 import img1 from "../asserts/works/work1.webp";
 import img2 from "../asserts/works/work2.webp";
 import img3 from "../asserts/works/work3.webp";
@@ -20,7 +22,7 @@ import img12 from "../asserts/works/work4.webp";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const images = [
+const images: StaticImageData[] = [
   img1, img2, img3, img4,
   img5, img6, img7, img8,
   img9, img10, img11, img12
@@ -31,48 +33,78 @@ const Gallery: React.FC = () => {
 
   useEffect(() => {
     const gallery = galleryRef.current;
-
     if (!gallery) return;
 
+    // General zoom & lift animation on the whole gallery
     gsap.fromTo(
       gallery,
+      { scale: 1.2, y: 0 },
       {
-        scale: 1.25,
-        y: 0,
-      },
-      {
-        scale: 0.95,
-        y: -100,
-        ease: "power1.out",
+        scale: 1,
+        y: -80,
+        ease: "power2.out",
         scrollTrigger: {
           trigger: gallery,
           start: "top bottom",
           end: "bottom top",
-          scrub: true,
+          scrub: 1,
         },
       }
     );
+
+    // Parallax effect for center column images
+    const centerImgs = gallery.querySelectorAll(".parallax-img");
+    centerImgs.forEach((img) => {
+      gsap.fromTo(
+        img,
+        { y: 40 },
+        {
+          y: -40,
+          ease: "none",
+          scrollTrigger: {
+            trigger: img,
+            start: "top bottom",
+            end: "bottom top",
+            scrub: 1,
+          },
+        }
+      );
+    });
   }, []);
+
+  // Distribute images into 3 columns
+  const columns = [[], [], []] as StaticImageData[][];
+  images.forEach((img, index) => {
+    columns[index % 3].push(img);
+  });
 
   return (
     <div
       ref={galleryRef}
-      className="relative grid grid-cols-2 md:grid-cols-3 gap-4 p-6 top-30  overflow-hidden"
+      className="relative z-0 grid grid-cols-2 md:grid-cols-3 gap-6 px-6 py-16"
     >
-      {images.map((img, index) => (
-        <div
-          key={index}
-          className="relative w-full h-72 md:h-96 rounded-lg overflow-hidden shadow-md"
-        >
-          <Image
-            src={img}
-            alt={`gallery-${index}`}
-            fill
-            className="object-cover"
-            placeholder="blur"
-          />
+      {columns.map((col, colIndex) => (
+        <div key={colIndex} className="flex flex-col gap-6">
+          {col.map((img, imgIndex) => (
+            <div
+              key={imgIndex}
+              className={`relative w-full h-72 md:h-96 rounded-xl overflow-hidden shadow-lg ${
+                colIndex === 1 ? "parallax-img" : ""
+              }`}
+            >
+              <Image
+                src={img}
+                alt={`gallery-${colIndex}-${imgIndex}`}
+                fill
+                className="object-cover transition-transform duration-500 ease-in-out"
+                placeholder="blur"
+              />
+            </div>
+          ))}
         </div>
       ))}
+  
+
     </div>
   );
 };
