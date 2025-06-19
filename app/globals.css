@@ -1,10 +1,24 @@
 @import "tailwindcss";
 
+/* Theme colors using CSS variables */
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --color-primary: #fefefe;
+  --color-secondary: #ff4081;
+  --color-accent: #f5a623;
+  --color-muted: #999999;
+  --color-background: #0f0f10;
+  --color-foreground: #fefefe;
 }
 
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: #0f0f10;
+    --color-foreground: #fefefe;
+  }
+}
+
+/* Tailwind inline theme extension (if needed) */
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -12,15 +26,106 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* ========== Font Faces ========== */
+
+/* Avengenz */
+@font-face {
+  font-family: "Avengenz";
+  src: url("/Fonts/Avengenz_Font_Family/Avengenz 400.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
 }
 
+/* Avenir LT Pro - All Weights and Styles */
+@font-face {
+  font-family: "AvenirLTPro";
+  src: url("/Fonts/avenir-lt-pro/AvenirLTProBlack.otf") format("opentype");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "AvenirLTPro";
+  src: url("/Fonts/avenir-lt-pro/AvenirLTProBlackOblique.otf")
+    format("opentype");
+  font-weight: 900;
+  font-style: oblique;
+}
+@font-face {
+  font-family: "AvenirLTPro";
+  src: url("/Fonts/avenir-lt-pro/AvenirLTProBook.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "AvenirLTPro";
+  src: url("/Fonts/avenir-lt-pro/AvenirLTProBookOblique.otf") format("opentype");
+  font-weight: 400;
+  font-style: oblique;
+}
+@font-face {
+  font-family: "AvenirLTPro";
+  src: url("/Fonts/avenir-lt-pro/AvenirLTProHeavy.otf") format("opentype");
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: "AvenirLTPro";
+  src: url("/Fonts/avenir-lt-pro/AvenirLTProHeavyOblique.otf")
+    format("opentype");
+  font-weight: 800;
+  font-style: oblique;
+}
+@font-face {
+  font-family: "AvenirLTPro";
+  src: url("/Fonts/avenir-lt-pro/AvenirLTProLight.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "AvenirLTPro";
+  src: url("/Fonts/avenir-lt-pro/AvenirLTProLightOblique.otf")
+    format("opentype");
+  font-weight: 300;
+  font-style: oblique;
+}
+@font-face {
+  font-family: "AvenirLTPro";
+  src: url("/Fonts/avenir-lt-pro/AvenirLTProMedium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "AvenirLTPro";
+  src: url("/Fonts/avenir-lt-pro/AvenirLTProMediumOblique.otf")
+    format("opentype");
+  font-weight: 500;
+  font-style: oblique;
+}
+@font-face {
+  font-family: "AvenirLTPro";
+  src: url("/Fonts/avenir-lt-pro/AvenirLTProOblique.otf") format("opentype");
+  font-weight: 400;
+  font-style: oblique;
+}
+@font-face {
+  font-family: "AvenirLTPro";
+  src: url("/Fonts/avenir-lt-pro/AvenirLTProRoman.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* ========== Custom Utility Classes ========== */
+
+/* Font families */
+.font-avengenz {
+  font-family: "Avengenz", sans-serif;
+}
+.font-avenir {
+  font-family: "AvenirLTPro", sans-serif;
+}
+
+/* Body base styles */
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: #0f0f10;
+  color: #fefefe;
 }
