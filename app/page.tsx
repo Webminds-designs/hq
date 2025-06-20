@@ -1,5 +1,7 @@
 import Gallery from "./Components/Gallery";
 import Hero from "./Components/Hero";
+import Services from "./Components/Services";
+import WaveCanvas from "./Components/WaveCanvas";
 import SelectedWorks from "./Components/works";
 
 export default function Home() {
@@ -27,7 +29,7 @@ export default function Home() {
   <Gallery />
 </div>
 
-    
+<Services />    
     </div>
   );
 }
