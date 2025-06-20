@@ -16,8 +16,8 @@ const works = [
 
 export default function SelectedWorks() {
   return (
-    <div className=" text-white py-12 px-6 md:px-20 pt-20 z-20 bg-[#0f0f10]">
-      <h2 className="text-8xl font-avenir font-bold  text-center mb-12">Selected Works</h2>
+    <div className="text-white py-12 px-6 md:px-20 pt-20 z-20 bg-[#0f0f10]">
+      <h2 className="text-5xl md:text-8xl font-avenir font-bold text-center mb-12">Selected Works</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-8">
         {works.map((work, index) => {
           const isLastItem = index === works.length - 1;
@@ -28,7 +28,7 @@ export default function SelectedWorks() {
             <div
               key={index}
               className={`relative overflow-hidden rounded-2xl shadow-lg group ${
-                shouldCenter ? "col-span-2 justify-self-center" : ""
+                shouldCenter ? "sm:col-span-2 sm:justify-self-center" : ""
               }`}
             >
               <Image

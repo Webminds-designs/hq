@@ -126,7 +126,7 @@ const WaveLayer = ({ flip = false }: { flip?: boolean }) => {
 
     const wave1 = createWave({ amplitude: 300, duration: 6, fillStyle: "rgb(255,0,0)", frequency: 2.5, width: vw, height: vh, segments: 100, waveHeight: vh * 0.7 });
     const wave2 = createWave({ amplitude: 420, duration: 4.5, fillStyle: "rgb(180,0,0)", frequency: 1.5, width: vw, height: vh, segments: 100, waveHeight:400 });
-    const wave3 = createWave({ amplitude: 300, duration: 4, fillStyle: "rgb(178,34,34)", frequency: 3, width: vw, height: vh, segments: 100, waveHeight: 200 });
+    const wave3 = createWave({ amplitude: 300, duration: 4, fillStyle: "rgb(139, 0, 0)", frequency: 3, width: vw, height: vh, segments: 100, waveHeight: 200 });
 
     waves.push(wave1, wave2, wave3);
 
@@ -168,7 +168,7 @@ const WaveLayer = ({ flip = false }: { flip?: boolean }) => {
         zIndex: -1,
         opacity: 0.9,
         width: "100%",
-        height: "400px",
+        height: "250px",
         filter: "blur(40px)",
         transform: flip ? "rotate(180deg)" : "none",
       }}

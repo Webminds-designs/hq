@@ -29,7 +29,7 @@ export default function Services() {
     <section className="h-screen md:pt-64">
     
       <div className="text-center mb-10">
-        <h2 className="text-8xl font-avenir font-bold  text-center mb-12">
+        <h2 className="text-5xl md:text-8xl font-avenir font-bold text-center mb-12">
           Services
         </h2>
       </div>
@@ -46,7 +46,7 @@ export default function Services() {
               className="object-cover transition-transform duration-300 group-hover:scale-105"
               priority
             />
-            <div className="absolute inset-0  bg-opacity-50 group-hover:bg-opacity-60 transition duration-300" />
+            <div className="absolute inset-0   transition duration-300" />
           <span className="absolute font-avenir font-light inset-0 flex items-center justify-center text-xl md:text-2xl  text-white drop-shadow-lg text-center px-2">
   {service.title}
 </span>
