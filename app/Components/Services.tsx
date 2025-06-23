@@ -26,14 +26,14 @@ const services: Service[] = [
 
 export default function Services() {
   return (
-    <section className="h-screen md:pt-64">
+    <section className="min-h-screen md:pt-64">
     
       <div className="text-center mb-10">
         <h2 className="text-5xl md:text-8xl font-avenir font-bold text-center mb-12">
           Services
         </h2>
       </div>
-      <div className=" mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 px-4">
+      <div className=" mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 px-4 p-5">
         {services.map((service) => (
           <div
             key={service.title}
