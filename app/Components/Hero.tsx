@@ -19,7 +19,7 @@ const Hero = () => {
       </div>
 
       {/* --- Top Layer: Text Content --- */}
-      <div className="relative z-20 -top-42 h-full flex flex-col justify-end pb-10 px-4 sm:px-6 md:px-8 text-white">
+      <div className="relative z-20 -top-62 h-full flex flex-col justify-end pb-10 px-4 sm:px-6 md:px-8 text-white">
         <h1 className="text-3xl sm:text-4xl md:text-8xl font-avengenz leading-tight">
           HQ ENTERTAINMENT
         </h1>

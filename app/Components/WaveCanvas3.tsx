@@ -51,76 +51,69 @@ const WaveLayer = ({ flip = false }: { flip?: boolean }) => {
     };
 
     const createWave = (options: Partial<Wave>): Wave => {
-      const wave: Wave = {
-        amplitude: options.amplitude || 200,
-        context: ctx,
-        curviness: options.curviness || 0.75,
-        duration: options.duration || 2,
-        fillStyle: options.fillStyle || "rgb(255,0,0)",
-        frequency: options.frequency || 4,
-        height: options.height || 600,
-        points: [],
-        segments: options.segments || 100,
-        tweens: [],
-        waveHeight: options.waveHeight || 300,
-        width: options.width || 800,
-        x: options.x || 0,
-        y: options.y || 0,
+  const wave: Wave = {
+    amplitude: options.amplitude || 30,
+    context: ctx,
+    curviness: options.curviness || 0.75,
+    duration: options.duration || 2,
+    fillStyle: options.fillStyle || "rgba(255,0,0,0.2)",
+    frequency: options.frequency || 2,
+    height: options.height || 600,
+    points: [],
+    segments: options.segments || 1,
+    tweens: [],
+    waveHeight: options.waveHeight || 300,
+    width: options.width || 800,
+    x: vw / 2,
+    y: vh / 2,
 
-        init() {
-          this.kill();
-          const interval = this.width / this.segments;
-          for (let i = 0; i <= this.segments; i++) {
-            const norm = i / this.segments;
-            const point: Point = { x: this.x + i * interval, y: 1 };
-            const tween = gsap.to(point, {
-              duration: this.duration,
-              y: -1,
-              repeat: -1,
-              yoyo: true,
-              ease: "sine.inOut",
-            }).progress(norm * this.frequency);
+    init() {
+      this.kill();
+      for (let i = 0; i < this.segments; i++) {
+        const point: Point = { x: this.x, y: this.y };
+        const tween = gsap.to(point, {
+          duration: this.duration,
+          repeat: -1,
+          yoyo: true,
+          ease: "sine.inOut",
+          onUpdate: () => {},
+        });
+        this.points.push(point);
+        this.tweens.push(tween);
+      }
+    },
 
-            this.points.push(point);
-            this.tweens.push(tween);
-          }
-        },
+    resize(width: number, height: number) {
+      this.width = width;
+      this.height = height;
+      this.x = width / 2;
+      this.y = height / 2;
+    },
 
-        resize(width: number, height: number) {
-          this.width = width;
-          this.height = height;
-          const interval = this.width / this.segments;
-          this.points.forEach((point, i) => {
-            point.x = this.x + i * interval;
-          });
-        },
+    draw() {
+      if (!ctx) return;
+      ctx.save();
+      ctx.beginPath();
+      ctx.translate(this.x, this.y);
 
-        draw() {
-          if (!ctx) return;
-          const height = this.amplitude / 2;
-          ctx.beginPath();
-          ctx.moveTo(this.points[0].x, this.height - this.waveHeight + this.points[0].y * height);
-          for (let i = 1; i < this.points.length; i++) {
-            const p = this.points[i];
-            ctx.lineTo(p.x, this.height - this.waveHeight + p.y * height);
-          }
-          ctx.lineTo(this.x + this.width, this.y + this.height);
-          ctx.lineTo(this.x, this.y + this.height);
-          ctx.closePath();
-          ctx.fillStyle = this.fillStyle;
-          ctx.fill();
-        },
+      const radius = this.amplitude * Math.abs(Math.sin(Date.now() * 0.001 * this.frequency));
+      ctx.arc(0, 0, radius + this.waveHeight, 0, Math.PI * 2);
+      ctx.fillStyle = this.fillStyle;
+      ctx.fill();
+      ctx.restore();
+    },
 
-        kill() {
-          this.tweens.forEach(t => t.kill());
-          this.tweens = [];
-          this.points = [];
-        },
-      };
+    kill() {
+      this.tweens.forEach(t => t.kill());
+      this.tweens = [];
+      this.points = [];
+    },
+  };
 
-      wave.init();
-      return wave;
-    };
+  wave.init();
+  return wave;
+};
+
 
     resizeCanvas();
 
@@ -168,21 +161,21 @@ const WaveLayer = ({ flip = false }: { flip?: boolean }) => {
         zIndex: -1,
         opacity: 0.9,
         width: "100%",
-        height: "250px",
-        filter: "blur(40px)",
+        height: "100vh",
+        filter: "blur(50px)",
         transform: flip ? "rotate(180deg)" : "none",
       }}
     />
   );
 };
 
-const WaveCanvas = () => {
+const WaveCanvas3 = () => {
   return (
     <>
-      <WaveLayer />         {/* Top Wave */}
-      <WaveLayer flip />    {/* Bottom Wave */}
+    <WaveLayer />
+        {/* Bottom Wave */}
     </>
   );
 };
 
-export default WaveCanvas;
+export default WaveCanvas3;
