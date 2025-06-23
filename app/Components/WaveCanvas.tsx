@@ -26,7 +26,8 @@ type Wave = {
 
 const WaveLayer = ({ flip = false }: { flip?: boolean }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  const resolution = typeof window !== "undefined" ? window.devicePixelRatio || 1 : 1;
+  const resolution =
+    typeof window !== "undefined" ? window.devicePixelRatio || 1 : 1;
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -37,7 +38,7 @@ const WaveLayer = ({ flip = false }: { flip?: boolean }) => {
 
     let vw = window.innerWidth;
     let vh = 400;
-    let waves: Wave[] = [];
+    const waves: Wave[] = [];
     let resized = false;
 
     const resizeCanvas = () => {
@@ -73,13 +74,15 @@ const WaveLayer = ({ flip = false }: { flip?: boolean }) => {
           for (let i = 0; i <= this.segments; i++) {
             const norm = i / this.segments;
             const point: Point = { x: this.x + i * interval, y: 1 };
-            const tween = gsap.to(point, {
-              duration: this.duration,
-              y: -1,
-              repeat: -1,
-              yoyo: true,
-              ease: "sine.inOut",
-            }).progress(norm * this.frequency);
+            const tween = gsap
+              .to(point, {
+                duration: this.duration,
+                y: -1,
+                repeat: -1,
+                yoyo: true,
+                ease: "sine.inOut",
+              })
+              .progress(norm * this.frequency);
 
             this.points.push(point);
             this.tweens.push(tween);
@@ -99,7 +102,10 @@ const WaveLayer = ({ flip = false }: { flip?: boolean }) => {
           if (!ctx) return;
           const height = this.amplitude / 2;
           ctx.beginPath();
-          ctx.moveTo(this.points[0].x, this.height - this.waveHeight + this.points[0].y * height);
+          ctx.moveTo(
+            this.points[0].x,
+            this.height - this.waveHeight + this.points[0].y * height
+          );
           for (let i = 1; i < this.points.length; i++) {
             const p = this.points[i];
             ctx.lineTo(p.x, this.height - this.waveHeight + p.y * height);
@@ -112,7 +118,7 @@ const WaveLayer = ({ flip = false }: { flip?: boolean }) => {
         },
 
         kill() {
-          this.tweens.forEach(t => t.kill());
+          this.tweens.forEach((t) => t.kill());
           this.tweens = [];
           this.points = [];
         },
@@ -124,35 +130,86 @@ const WaveLayer = ({ flip = false }: { flip?: boolean }) => {
 
     resizeCanvas();
 
-    const wave1 = createWave({ amplitude: 300, duration: 6, fillStyle: "rgb(255,0,0)", frequency: 2.5, width: vw, height: vh, segments: 100, waveHeight: vh * 0.7 });
-    const wave2 = createWave({ amplitude: 420, duration: 4.5, fillStyle: "rgb(180,0,0)", frequency: 1.5, width: vw, height: vh, segments: 100, waveHeight:400 });
-    const wave3 = createWave({ amplitude: 300, duration: 4, fillStyle: "rgb(139, 0, 0)", frequency: 3, width: vw, height: vh, segments: 100, waveHeight: 200 });
+    const wave1 = createWave({
+      amplitude: 300,
+      duration: 6,
+      fillStyle: "rgb(255,0,0)",
+      frequency: 2.5,
+      width: vw,
+      height: vh,
+      segments: 100,
+      waveHeight: vh * 0.7,
+    });
+    const wave2 = createWave({
+      amplitude: 420,
+      duration: 4.5,
+      fillStyle: "rgb(180,0,0)",
+      frequency: 1.5,
+      width: vw,
+      height: vh,
+      segments: 100,
+      waveHeight: 400,
+    });
+    const wave3 = createWave({
+      amplitude: 300,
+      duration: 4,
+      fillStyle: "rgb(139, 0, 0)",
+      frequency: 3,
+      width: vw,
+      height: vh,
+      segments: 100,
+      waveHeight: 200,
+    });
 
     waves.push(wave1, wave2, wave3);
 
-    gsap.to(waves, { duration: 12, waveHeight: vh * 0.8, ease: "sine.inOut", repeat: -1, yoyo: true });
-    gsap.to(wave1, { duration: 8, amplitude: 30, ease: "sine.inOut", repeat: -1, yoyo: true });
-    gsap.to(wave2, { duration: 7, amplitude: 70, ease: "sine.inOut", repeat: -1, yoyo: true });
-    gsap.to(wave3, { duration: 5, amplitude: 20, ease: "sine.inOut", repeat: -1, yoyo: true });
+    gsap.to(waves, {
+      duration: 12,
+      waveHeight: vh * 0.8,
+      ease: "sine.inOut",
+      repeat: -1,
+      yoyo: true,
+    });
+    gsap.to(wave1, {
+      duration: 8,
+      amplitude: 30,
+      ease: "sine.inOut",
+      repeat: -1,
+      yoyo: true,
+    });
+    gsap.to(wave2, {
+      duration: 7,
+      amplitude: 70,
+      ease: "sine.inOut",
+      repeat: -1,
+      yoyo: true,
+    });
+    gsap.to(wave3, {
+      duration: 5,
+      amplitude: 20,
+      ease: "sine.inOut",
+      repeat: -1,
+      yoyo: true,
+    });
 
     window.addEventListener("resize", () => (resized = true));
 
     const update = () => {
       if (resized) {
         resizeCanvas();
-        waves.forEach(w => w.resize(vw, vh));
+        waves.forEach((w) => w.resize(vw, vh));
         resized = false;
       }
 
       ctx.clearRect(0, 0, vw, vh);
       ctx.globalCompositeOperation = "soft-light";
-      waves.forEach(w => w.draw());
+      waves.forEach((w) => w.draw());
     };
 
     gsap.ticker.add(update);
 
     return () => {
-      waves.forEach(w => w.kill());
+      waves.forEach((w) => w.kill());
       gsap.ticker.remove(update);
     };
   }, []);
@@ -179,8 +236,8 @@ const WaveLayer = ({ flip = false }: { flip?: boolean }) => {
 const WaveCanvas = () => {
   return (
     <>
-      <WaveLayer />         {/* Top Wave */}
-      <WaveLayer flip />    {/* Bottom Wave */}
+      <WaveLayer /> {/* Top Wave */}
+      <WaveLayer flip /> {/* Bottom Wave */}
     </>
   );
 };

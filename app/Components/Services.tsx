@@ -8,7 +8,7 @@ import service3 from "../asserts/services/service3.webp";
 import service4 from "../asserts/services/service4.webp";
 import service5 from "../asserts/services/service5.webp";
 import service6 from "../asserts/services/service6.webp";
-import WaveCanvas from "./WaveCanvas";
+// import WaveCanvas from "./WaveCanvas";
 
 interface Service {
   title: string;
@@ -27,7 +27,6 @@ const services: Service[] = [
 export default function Services() {
   return (
     <section className="min-h-screen md:pt-64">
-    
       <div className="text-center mb-10">
         <h2 className="text-5xl md:text-8xl font-avenir font-bold text-center mb-12">
           Services
@@ -47,10 +46,9 @@ export default function Services() {
               priority
             />
             <div className="absolute inset-0   transition duration-300" />
-          <span className="absolute font-avenir font-light inset-0 flex items-center justify-center text-xl md:text-2xl  text-white drop-shadow-lg text-center px-2">
-  {service.title}
-</span>
-
+            <span className="absolute font-avenir font-light inset-0 flex items-center justify-center text-xl md:text-2xl  text-white drop-shadow-lg text-center px-2">
+              {service.title}
+            </span>
           </div>
         ))}
       </div>

@@ -19,8 +19,8 @@ import img9 from "../asserts/works/work1.webp";
 import img10 from "../asserts/works/work2.webp";
 import img11 from "../asserts/works/work3.webp";
 import img12 from "../asserts/works/work4.webp";
-import blurimg from "../asserts/blurLayer.webp";
-import WaveCanvas from "./WaveCanvas";
+// import blurimg from "../asserts/blurLayer.webp";
+// import WaveCanvas from "./WaveCanvas";
 import WaveCanvas2 from "./WaveCanvas2";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -119,8 +119,10 @@ const Gallery: React.FC = () => {
       </div>
 
       <div className="absolute -bottom-42   inset-0 z-30 w-full">
-        <div className=""> <WaveCanvas2 /></div>
-       
+        <div className="">
+          {" "}
+          <WaveCanvas2 />
+        </div>
       </div>
     </div>
   );
