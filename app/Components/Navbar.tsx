@@ -52,7 +52,7 @@ const Navbar = () => {
   return (
     <header
       ref={navRef}
-      className="fixed top-0 left-0 w-full z-50 text-white px-6 py-4 "
+      className="fixed font-avenir top-0 left-0 w-full z-50 text-white px-6 py-4 "
     >
       <div className="max-w-8xl mx-auto flex justify-between items-center">
         {/* Logo */}

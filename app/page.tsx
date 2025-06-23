@@ -1,3 +1,5 @@
+import Contact from "./Components/Contact";
+import Footer from "./Components/Footer";
 import Gallery from "./Components/Gallery";
 import Hero from "./Components/Hero";
 import Navbar from "./Components/Navbar";
@@ -31,7 +33,12 @@ export default function Home() {
   <Gallery />
 </div>
 
-<Services />    
+<Services /> 
+<div className="relative z-0 mt-30">
+  <Contact />
+  
+  </div> 
+
     </div>
   );
 }
