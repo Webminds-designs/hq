@@ -24,7 +24,8 @@ const Hero = () => {
           HQ ENTERTAINMENT
         </h1>
         <p className="font-avenir font-light text-sm sm:text-base md:text-[25px] mt-2 sm:mt-3 md:mt-4">
-          Igniting <em className="italic">Unforgettable</em> moments Through Entertainment
+          Igniting <em className="font-oldStandardTT italic">Unforgettable</em>{" "}
+          moments Through Entertainment
         </p>
         <div className="text-base sm:text-lg md:text-xl mt-4 sm:mt-6 flex flex-col sm:flex-row sm:justify-between gap-y-1 sm:gap-y-0 w-full md:max-w-2xl text-white/80">
           <span>©2025</span>
