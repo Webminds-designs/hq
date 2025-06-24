@@ -2,13 +2,12 @@ import Image from "next/image"
 
 export default function AboutHQ() {
     const teamMembers = [
-        { name: "Ruvindu Parakrama", image: "https://images.unsplash.com/photo-1511367461989-f85a21fda167?auto=format&fit=facearea&w=314&h=320&q=80" },
-        { name: "Ruvindu Parakrama", image: "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=facearea&w=314&h=320&q=80" },
-        { name: "Ruvindu Parakrama", image: "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=facearea&w=314&h=320&q=80" },
-        { name: "Ruvindu Parakrama", image: "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=facearea&w=314&h=320&q=80" },
-        { name: "Ruvindu Parakrama", image: "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=facearea&w=314&h=320&q=80" },
-        { name: "Ruvindu Parakrama", image: "https://images.unsplash.com/photo-1519340333755-c2f6c58f5c4b?auto=format&fit=facearea&w=314&h=320&q=80" },
-    ]
+        { name: "Ruvindu Parakrama", image: "/image.jpg" },
+        { name: "Ruvindu Parakrama", image: "/image (1).jpg" },
+        { name: "Ruvindu Parakrama", image: "/image (2).jpg" },
+        { name: "Ruvindu Parakrama", image: "/image (3).jpg" },
+        { name: "Ruvindu Parakrama", image: "/image (4).jpg" },
+        { name: "Ruvindu Parakrama", image: "/image (5).jpg" },]
 
     return (
         <section className="bg-[#0f0f10] text-white px-6 md:px-12 lg:px-16 relative">
@@ -32,7 +31,7 @@ export default function AboutHQ() {
                     <div className="flex justify-center mb-32">
                         <div className="flex flex-col items-center gap-8">
                             {/* Top row - 4 members */}
-                            <div className="flex gap-4">
+                            <div className="flex gap-6">
                                 {teamMembers.slice(0, 4).map((member, index) => (
                                     <div key={index} className="flex flex-col items-center">
                                         <div
@@ -48,8 +47,8 @@ export default function AboutHQ() {
                                                     className="object-cover rounded-[4.88px] flex-1"
                                                     style={{ width: "100%", height: "200px" }}
                                                 />
-                                                <div className="mt-3 bg-white rounded-[4.88px] p-1 text-center">
-                                                    <p className="font-avenir text-sm font-medium text-black">{member.name}</p>
+                                                <div className="mt-3 bg-white rounded-[4.88px] text-left">
+                                                    <p className="font-avenir text-xs font-medium text-black">{member.name}</p>
                                                     <p className="font-avenir text-xs text-gray-600">@harry.hq</p>
                                                 </div>
                                             </div>
@@ -75,8 +74,8 @@ export default function AboutHQ() {
                                                     className="object-cover rounded-[4.88px] flex-1"
                                                     style={{ width: "100%", height: "200px" }}
                                                 />
-                                                <div className="mt-3 bg-white rounded-[4.88px] p-1 text-center">
-                                                    <p className="font-avenir text-sm font-medium text-black">{member.name}</p>
+                                                <div className="mt-3 bg-white rounded-[4.88px] text-left">
+                                                    <p className="font-avenir text-xs font-medium text-black">{member.name}</p>
                                                     <p className="font-avenir text-xs text-gray-600">@harry.hq</p>
                                                 </div>
                                             </div>
