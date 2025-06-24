@@ -1,5 +1,8 @@
 import Gallery from "./Components/Gallery";
 import Hero from "./Components/Hero";
+import Navbar from "./Components/Navbar";
+import Services from "./Components/Services";
+// import WaveCanvas from "./Components/WaveCanvas";
 import SelectedWorks from "./Components/works";
 import AboutHQ from "./Components/AboutHQ";
 
@@ -17,8 +20,8 @@ export default function Home() {
         FONT 02 :- `font-avenir font-light`
       </h1>
        */}
-      <div className="relative z-20">
-        <Hero />
+       <div className="relative z-20">
+      <Hero />
       </div>
       <div className="relative z-10">
         <SelectedWorks />
@@ -28,11 +31,7 @@ export default function Home() {
         <Gallery />
       </div>
 
-      <div className="relative z-0">
-        <AboutHQ />
-      </div>
-
-
+    
     </div>
   );
 }

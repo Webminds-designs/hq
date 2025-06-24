@@ -225,21 +225,20 @@ const WaveLayer = ({ flip = false }: { flip?: boolean }) => {
         zIndex: -1,
         opacity: 0.9,
         width: "100%",
-        height: "250px",
-        filter: "blur(40px)",
+        height: "100px",
+        filter: "blur(50px)",
         transform: flip ? "rotate(180deg)" : "none",
       }}
     />
   );
 };
 
-const WaveCanvas = () => {
+const WaveCanvas2 = () => {
   return (
     <>
-      <WaveLayer /> {/* Top Wave */}
       <WaveLayer flip /> {/* Bottom Wave */}
     </>
   );
 };
 
-export default WaveCanvas;
+export default WaveCanvas2;

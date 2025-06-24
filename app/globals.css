@@ -114,6 +114,10 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "Old_Standard_TT";
+  src: url("/Fonts/Old_Standard_TT/OldStandardTT-Italic.ttf");
+}
 /* ========== Custom Utility Classes ========== */
 
 /* Font families */
@@ -122,6 +126,9 @@
 }
 .font-avenir {
   font-family: "AvenirLTPro", sans-serif;
+}
+.font-oldStandardTT {
+  font-family: "Old_Standard_TT", serif;
 }
 
 
