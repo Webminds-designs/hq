@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import { useRouter } from "next/navigation";
 import bgimg from "../asserts/Rectangle 2030.webp";
 import Footer from "./Footer";
 

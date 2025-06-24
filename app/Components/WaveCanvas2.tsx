@@ -26,9 +26,10 @@ type Wave = {
 
 const WaveLayer = ({ flip = false }: { flip?: boolean }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  const resolution = typeof window !== "undefined" ? window.devicePixelRatio || 1 : 1;
-
+ 
   useEffect(() => {
+    const resolution = typeof window !== "undefined" ? window.devicePixelRatio || 1 : 1;
+
     const canvas = canvasRef.current;
     if (!canvas) return;
 
