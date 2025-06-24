@@ -19,7 +19,7 @@ export default function AboutHQ() {
                 <div className="hidden lg:block absolute left-[60%] top-0 bottom-0 w-px bg-gray-700 opacity-40"></div>
                 <div className="hidden lg:block absolute left-[80%] top-0 bottom-0 w-px bg-gray-700 opacity-40"></div>
 
-                <div className="max-w-7xl mx-auto relative z-10">
+                <div className="max-w-7xl mx-auto relative z-10 mt-30">
                     {/* Main Heading */}
                     <div className="text-center mb-20">
                         <h1 className="font-avenir text-7xl md:text-8xl lg:text-[120px] font-bold">
@@ -88,27 +88,19 @@ export default function AboutHQ() {
 
 
                     {/* APPROACH Section */}
-                    <div className="relative mb-32">
+                    <div className="relative mb-36">
                         {/* APPROACH label aligned to 1st vertical line (20%) */}
-                        <div className="absolute top-0 left-[8%] transform -translate-x-1">
-                            <div className="text-[18px] font-avenir text-white uppercase font-normal">
+                        <div className="absolute top-0 left-[10.5%] transform -translate-x-1">
+                            <div className="text-[12px] font-avenir text-white uppercase font-normal">
                                 Approach
                             </div>
                         </div>
 
                         {/* APPROACH content */}
                         <div className="ml-[38.5%] pr-8">
-                            <h2 className="font-avenir text-4xl lg:text-[60px] font-medium mb-8 leading-[0.95] tracking-[-4%] max-w-2xl">
+                            <h2 className="font-avenir top-0 text-4xl lg:text-[45px] font-medium mb-8 leading-[0.95] tracking-[-4%] max-w-2xl">
                                 Crafting  <em
-                                    className="font-oldstandard italic font-normal"
-                                    style={{
-                                        fontFamily: "'Old Standard TT', serif",
-                                        fontWeight: 400,
-                                        fontStyle: "italic",
-                                        fontSize: "60px",
-                                        lineHeight: "60px",
-                                        letterSpacing: "-4%",
-                                    }}
+                                    className="font-oldStandardTT  italic font-normal"
                                 >
                                     Moments
                                 </em>
@@ -117,7 +109,7 @@ export default function AboutHQ() {
                                 <br />
                                 Emotion
                             </h2>
-                            <div className="space-y-6 font-avenir text-[15px] leading-[1.6] text-white font-light max-w-2xl">
+                            <div className="space-y-6 font-avenir text-[20px] leading-[1.5] text-white font-light max-w-2xl">
                                 <p>
                                     At HQ Entertainment, we don't just produce events — we craft immersive, unforgettable experiences. As
                                     a full-service event solutions company, we specialise in bringing bold ideas to life through
@@ -135,22 +127,22 @@ export default function AboutHQ() {
                     {/* PHILOSOPHY Section */}
                     <div className="relative mb-32">
                         {/* PHILOSOPHY label aligned to 2nd vertical line (40%) */}
-                        <div className="absolute top-0 left-[40%] transform -translate-x-2">
-                            <div className="text-[10px] font-avenir tracking-[0.3em] text-gray-400 uppercase font-medium">
+                        <div className="absolute top-0 left-[33%] transform -translate-x-2">
+                            <div className="text-[12px] font-avenir text-white uppercase font-normal">
                                 PHILOSOPHY
                             </div>
                         </div>
 
                         {/* PHILOSOPHY content starting from 3rd vertical line (60%) */}
-                        <div className="ml-[60%] pr-8">
-                            <h2 className="font-avenir text-4xl lg:text-[52px] font-light mb-8 leading-[0.95] tracking-tight max-w-xl">
+                        <div className="ml-[61.5%] pr-8">
+                            <h2 className="font-avenir text-4xl lg:text-[45px] font-medium mb-8 leading-[0.95] tracking-tight max-w-xl">
                                 Purpose Driven
                                 <br />
-                                Production <em className="italic font-light">With</em>
+                                Production <em className="font-oldStandardTT italic font-normal">With</em>
                                 <br />
-                                <em className="italic font-light">Impact</em>
+                                <em className="font-oldStandardTT italic font-normal">Impact</em>
                             </h2>
-                            <div className="space-y-6 font-avenir text-[15px] leading-[1.6] text-white font-light max-w-xl">
+                            <div className="space-y-6 font-avenir text-[20px] leading-[1.6] text-white font-light max-w-11/12">
                                 <p>We believe that a truly remarkable event is not only seen or heard — it's felt.</p>
                                 <p>
                                     That's why every project at HQ Entertainment is rooted in intentional design, emotional storytelling,
@@ -165,23 +157,23 @@ export default function AboutHQ() {
                     </div>
 
                     {/* BEYOND EVENTS Section */}
-                    <div className="relative mb-32">
+                    <div className="relative mb-34">
                         {/* BEYOND EVENTS label in the rightmost column */}
-                        <div className="absolute top-0 left-[80%] pl-4">
-                            <div className="text-[10px] font-avenir tracking-[0.3em] text-gray-400 uppercase font-medium">
+                        <div className="absolute top-0 left-[0.1%]">
+                            <div className="text-[12px] font-avenir text-white uppercase font-normal">
                                 BEYOND EVENTS
                             </div>
                         </div>
 
                         {/* BEYOND EVENTS content starting from 1st line in that section */}
-                        <div className="ml-[80%] pr-8">
-                            <h2 className="font-avenir text-3xl lg:text-[42px] font-light mb-8 leading-[0.95] tracking-tight">
+                        <div className="ml-[15.5%] pr-8">
+                            <h2 className="font-avenir text-4xl lg:text-[45px] font-medium mb-8 leading-[0.95] tracking-tight max-w-xl">
                                 How People &<br />
-                                Culture Inspire <em className="italic font-light">Our</em>
+                                Culture Inspire <em className="font-oldStandardTT italic font-normal">Our</em>
                                 <br />
-                                <em className="italic font-light">Creativity</em>
+                                <em className="font-oldStandardTT italic font-normal">Creativity</em>
                             </h2>
-                            <div className="space-y-6 font-avenir text-[14px] leading-[1.6] text-white font-light">
+                            <div className="space-y-6 font-avenir text-[20px] leading-[1.6] text-white font-light max-w-sm">
                                 <p>
                                     We find inspiration in vibrant cultures, cinematic storytelling, and spontaneous moments of joy — all
                                     of which fuel the energy We bring to every production. For us, creativity isn't just a skill — it's a
@@ -194,15 +186,15 @@ export default function AboutHQ() {
                     {/* FEATURED IN Section */}
                     <div className="relative mb-16">
                         {/* FEATURED IN label aligned to 2nd vertical line (40%) */}
-                        <div className="absolute top-0 left-[40%] transform -translate-x-2">
-                            <div className="text-[10px] font-avenir tracking-[0.3em] text-gray-400 uppercase font-medium">
+                        <div className="absolute top-0 left-[33%] transform -translate-x-2">
+                            <div className="text-[12px] font-avenir text-white uppercase font-normal">
                                 FEATURED IN
                             </div>
                         </div>
 
                         {/* FEATURED IN content starting from 3rd vertical line (60%) */}
-                        <div className="ml-[60%] pr-8">
-                            <p className="font-avenir text-[15px] text-white leading-[1.6] font-light max-w-md pt-8">
+                        <div className="ml-[61.5%] pr-8">
+                            <p className="space-y-6 font-avenir text-[20px] leading-[1.6] text-white font-light max-w-sm">
                                 Our work has been featured by Artwalk Colombo, Yamu, Ceylon Today, The Sunday Times, Roar Media, and
                                 more.
                             </p>
@@ -210,9 +202,15 @@ export default function AboutHQ() {
                     </div>
 
                     {/* Final tagline */}
-                    <div className="text-center mt-16">
-                        <p className="font-avenir text-2xl lg:text-3xl leading-tight font-light">
-                            Proudly partnered with visionary brands to craft <em className="italic">extraordinary experiences</em>.
+                    <div className="text-center mt-36">
+                        <p className="font-avenir text-4xl leading-10 max-w-full font-medium text-white">
+                            Proudly partnered with visionary brands to <br />
+                            craft{" "}
+                            <em
+                                className="font-oldStandardTT italic font-normal"
+                            >
+                                extraordinary experiences.
+                            </em>
                         </p>
                     </div>
                 </div>

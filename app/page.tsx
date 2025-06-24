@@ -20,8 +20,9 @@ export default function Home() {
         FONT 02 :- `font-avenir font-light`
       </h1>
        */}
-       <div className="relative z-20">
-      <Hero />
+      <Navbar />
+      <div className="relative z-20">
+        <Hero />
       </div>
       <div className="relative z-10">
         <SelectedWorks />
@@ -31,7 +32,12 @@ export default function Home() {
         <Gallery />
       </div>
 
-    
+
+
+      <Services />
+      <div className="relative z-0">
+        <AboutHQ />
+      </div>
     </div>
   );
 }
