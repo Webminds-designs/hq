@@ -90,16 +90,28 @@ export default function AboutHQ() {
                     {/* APPROACH Section */}
                     <div className="relative mb-32">
                         {/* APPROACH label aligned to 1st vertical line (20%) */}
-                        <div className="absolute top-0 left-[20%] transform -translate-x-2">
-                            <div className="text-[10px] font-avenir tracking-[0.3em] text-gray-400 uppercase font-medium">
-                                APPROACH
+                        <div className="absolute top-0 left-[8%] transform -translate-x-1">
+                            <div className="text-[18px] font-avenir text-white uppercase font-normal">
+                                Approach
                             </div>
                         </div>
 
-                        {/* APPROACH content starting from 2nd vertical line (40%) */}
-                        <div className="ml-[40%] pr-8">
-                            <h2 className="font-avenir text-4xl lg:text-[52px] font-light mb-8 leading-[0.95] tracking-tight max-w-2xl">
-                                Crafting <em className="italic font-light">Moments</em>
+                        {/* APPROACH content */}
+                        <div className="ml-[38.5%] pr-8">
+                            <h2 className="font-avenir text-4xl lg:text-[60px] font-medium mb-8 leading-[0.95] tracking-[-4%] max-w-2xl">
+                                Crafting  <em
+                                    className="font-oldstandard italic font-normal"
+                                    style={{
+                                        fontFamily: "'Old Standard TT', serif",
+                                        fontWeight: 400,
+                                        fontStyle: "italic",
+                                        fontSize: "60px",
+                                        lineHeight: "60px",
+                                        letterSpacing: "-4%",
+                                    }}
+                                >
+                                    Moments
+                                </em>
                                 <br />
                                 with Purpose and
                                 <br />
