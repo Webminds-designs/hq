@@ -5,6 +5,7 @@ import Services from "./Components/Services";
 // import WaveCanvas from "./Components/WaveCanvas";
 import SelectedWorks from "./Components/works";
 import AboutHQ from "./Components/AboutHQ";
+import AnimatedLogos from "./Components/AnimatedLogos";
 
 export default function Home() {
   return (
@@ -37,6 +38,10 @@ export default function Home() {
       <Services />
       <div className="relative z-0">
         <AboutHQ />
+      </div>
+
+      <div className="relative z-10">
+        <AnimatedLogos />
       </div>
     </div>
   );

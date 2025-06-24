@@ -202,7 +202,7 @@ export default function AboutHQ() {
                     </div>
 
                     {/* Final tagline */}
-                    <div className="text-center mt-36">
+                    <div className="text-center mt-36 mb-36">
                         <p className="font-avenir text-4xl leading-10 max-w-full font-medium text-white">
                             Proudly partnered with visionary brands to <br />
                             craft{" "}
@@ -214,6 +214,8 @@ export default function AboutHQ() {
                         </p>
                     </div>
                 </div>
+
+
             </div>
         </section >
     )
