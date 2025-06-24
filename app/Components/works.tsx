@@ -16,8 +16,8 @@ const works = [
 
 export default function SelectedWorks() {
   return (
-    <div className="text-white py-12 px-6 md:px-20 pt-20 z-20 bg-[#0f0f10]">
-      <h2 className="text-5xl md:text-8xl font-avenir font-bold text-center mb-12">
+    <div id="work" className="text-white py-12 px-6 md:px-20 pt-20 z-20 bg-[#0f0f10]">
+      <h2 className="text-5xl md:text-[106px] font-avenir font-bold text-center mb-12">
         Selected Works
       </h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-8">
@@ -40,7 +40,7 @@ export default function SelectedWorks() {
                 height={400}
                 className="w-full h-96 object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
               />
-              <div className="absolute bottom-4 left-4 text-white text-lg font-semibold bg-opacity-50 px-3 py-1 rounded">
+              <div className="absolute bottom-4 left-4 text-white text-xl font-semibold bg-opacity-50 px-3 py-1 rounded">
                 {work.title}
               </div>
             </div>

@@ -67,12 +67,33 @@ const Navbar = () => {
         </div>
 
         {/* Desktop Menu */}
-        <nav className="hidden md:flex gap-20 text-sm font-medium">
-          <a href="#work" className="hover:text-red-500 transition">WORK</a>
-          <a href="#services" className="hover:text-red-500 transition">SERVICES</a>
-          <a href="#about" className="hover:text-red-500 transition">ABOUT</a>
-          <a href="#connect" className="hover:text-red-500 transition">CONNECT</a>
-        </nav>
+       <nav className="hidden md:flex gap-20 text-[12px] font-medium pr-18">
+  <a
+    href="#work"
+    className="relative transition after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 hover:after:w-full after:h-[1px] after:bg-white after:transition-all after:duration-300"
+  >
+    WORK
+  </a>
+  <a
+    href="#services"
+    className="relative  transition after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 hover:after:w-full after:h-[1px] after:bg-white after:transition-all after:duration-300"
+  >
+    SERVICES
+  </a>
+  <a
+    href="#about"
+    className="relative  transition after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 hover:after:w-full after:h-[1px] after:bg-white after:transition-all after:duration-300"
+  >
+    ABOUT
+  </a>
+  <a
+    href="#connect"
+    className="relative  transition after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 hover:after:w-full after:h-[1px] after:bg-white after:transition-all after:duration-300"
+  >
+    CONNECT
+  </a>
+</nav>
+
 
         {/* Hamburger Icon */}
         <div className="md:hidden">

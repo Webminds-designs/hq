@@ -26,8 +26,7 @@ type Wave = {
 
 const WaveLayer = ({ flip = false }: { flip?: boolean }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  const resolution =
-    typeof window !== "undefined" ? window.devicePixelRatio || 1 : 1;
+  const resolution = typeof window !== "undefined" ? window.devicePixelRatio || 1 : 1;
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -36,18 +35,19 @@ const WaveLayer = ({ flip = false }: { flip?: boolean }) => {
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
 
-    let vw = window.innerWidth;
+    let vw = window.innerWidth * 0.9; // ✅ 90% width
     let vh = 400;
     const waves: Wave[] = [];
     let resized = false;
 
     const resizeCanvas = () => {
-      vw = window.innerWidth;
+      vw = window.innerWidth * 0.9; // ✅ always update 90%
       vh = 400;
       canvas.width = vw * resolution;
       canvas.height = vh * resolution;
       canvas.style.width = vw + "px";
       canvas.style.height = vh + "px";
+      ctx.setTransform(1, 0, 0, 1, 0, 0);
       ctx.scale(resolution, resolution);
     };
 
@@ -64,7 +64,7 @@ const WaveLayer = ({ flip = false }: { flip?: boolean }) => {
         segments: options.segments || 100,
         tweens: [],
         waveHeight: options.waveHeight || 300,
-        width: options.width || 800,
+        width: options.width || vw,
         x: options.x || 0,
         y: options.y || 0,
 
@@ -102,10 +102,7 @@ const WaveLayer = ({ flip = false }: { flip?: boolean }) => {
           if (!ctx) return;
           const height = this.amplitude / 2;
           ctx.beginPath();
-          ctx.moveTo(
-            this.points[0].x,
-            this.height - this.waveHeight + this.points[0].y * height
-          );
+          ctx.moveTo(this.points[0].x, this.height - this.waveHeight + this.points[0].y * height);
           for (let i = 1; i < this.points.length; i++) {
             const p = this.points[i];
             ctx.lineTo(p.x, this.height - this.waveHeight + p.y * height);
@@ -201,7 +198,7 @@ const WaveLayer = ({ flip = false }: { flip?: boolean }) => {
         resized = false;
       }
 
-      ctx.clearRect(0, 0, vw, vh);
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
       ctx.globalCompositeOperation = "soft-light";
       waves.forEach((w) => w.draw());
     };
@@ -221,13 +218,14 @@ const WaveLayer = ({ flip = false }: { flip?: boolean }) => {
         position: "absolute",
         top: flip ? "auto" : 0,
         bottom: flip ? 0 : "auto",
-        left: 0,
+        left: "50%",
+        transform: `translateX(-50%) ${flip ? "rotate(180deg)" : ""}`,
         zIndex: -1,
         opacity: 0.9,
-        width: "100%",
+        width: "90%", // ✅ visually 90%
         height: "100px",
-        filter: "blur(50px)",
-        transform: flip ? "rotate(180deg)" : "none",
+        filter: "blur(70px)",
+        display: "block",
       }}
     />
   );
@@ -235,9 +233,9 @@ const WaveLayer = ({ flip = false }: { flip?: boolean }) => {
 
 const WaveCanvas2 = () => {
   return (
-    <>
-      <WaveLayer flip /> {/* Bottom Wave */}
-    </>
+    <div>
+      <WaveLayer flip />
+    </div>
   );
 };
 
