@@ -1,6 +1,7 @@
 import Gallery from "./Components/Gallery";
 import Hero from "./Components/Hero";
 import SelectedWorks from "./Components/works";
+import AboutHQ from "./Components/AboutHQ";
 
 export default function Home() {
   return (
@@ -16,18 +17,22 @@ export default function Home() {
         FONT 02 :- `font-avenir font-light`
       </h1>
        */}
-       <div className="relative z-20">
-      <Hero />
+      <div className="relative z-20">
+        <Hero />
       </div>
-    <div className="relative z-10">
-  <SelectedWorks />
-</div>
+      <div className="relative z-10">
+        <SelectedWorks />
+      </div>
 
-<div className="relative z-0 mt-30">
-  <Gallery />
-</div>
+      <div className="relative z-0 mt-30">
+        <Gallery />
+      </div>
 
-    
+      <div className="relative z-0">
+        <AboutHQ />
+      </div>
+
+
     </div>
   );
 }

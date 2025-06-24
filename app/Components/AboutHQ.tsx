@@ -2,75 +2,94 @@ import Image from "next/image"
 
 export default function AboutHQ() {
     const teamMembers = [
-        { name: "Danielle Hutchinson", image: "/placeholder.svg?height=200&width=160" },
-        { name: "Danielle Hutchinson", image: "/placeholder.svg?height=200&width=160" },
-        { name: "Danielle Hutchinson", image: "/placeholder.svg?height=200&width=160" },
-        { name: "Danielle Hutchinson", image: "/placeholder.svg?height=200&width=160" },
-        { name: "Danielle Hutchinson", image: "/placeholder.svg?height=200&width=160" },
-        { name: "Danielle Hutchinson", image: "/placeholder.svg?height=200&width=160" },
+        { name: "Ruvindu Parakrama", image: "https://images.unsplash.com/photo-1511367461989-f85a21fda167?auto=format&fit=facearea&w=314&h=320&q=80" },
+        { name: "Ruvindu Parakrama", image: "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=facearea&w=314&h=320&q=80" },
+        { name: "Ruvindu Parakrama", image: "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=facearea&w=314&h=320&q=80" },
+        { name: "Ruvindu Parakrama", image: "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=facearea&w=314&h=320&q=80" },
+        { name: "Ruvindu Parakrama", image: "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=facearea&w=314&h=320&q=80" },
+        { name: "Ruvindu Parakrama", image: "https://images.unsplash.com/photo-1519340333755-c2f6c58f5c4b?auto=format&fit=facearea&w=314&h=320&q=80" },
     ]
 
     return (
-        <section className="bg-[#0f0f10] text-white py-20 px-6 md:px-12 lg:px-20 relative">
-            <div className="max-w-7xl mx-auto relative z-10">
-                {/* Main Heading */}
-                <div className="text-center mb-20">
-                    <h1 className="font-avenir text-7xl md:text-8xl lg:text-[120px] font-light tracking-tight leading-none">
-                        About HQ
-                    </h1>
-                </div>
+        <section className="bg-[#0f0f10] text-white px-6 md:px-12 lg:px-16 relative">
 
-                {/* Team Grid */}
-                <div className="flex justify-center mb-32">
-                    <div className="flex flex-col items-center gap-8">
-                        {/* Top row - 4 members */}
-                        <div className="flex gap-6">
-                            {teamMembers.slice(0, 4).map((member, index) => (
-                                <div key={index} className="flex flex-col items-center">
-                                    <div className="bg-white p-3 mb-3 shadow-lg">
-                                        <Image
-                                            src={member.image || "/placeholder.svg"}
-                                            alt={member.name}
-                                            width={140}
-                                            height={180}
-                                            className="object-cover"
-                                        />
-                                    </div>
-                                    <p className="font-avenir text-xs text-center font-light">{member.name}</p>
-                                </div>
-                            ))}
-                        </div>
+            <div>
+                {/* 4 Vertical divider lines creating 5 equal sections */}
+                <div className="hidden lg:block absolute left-[20%] top-0 bottom-0 w-px bg-gray-700 opacity-40"></div>
+                <div className="hidden lg:block absolute left-[40%] top-0 bottom-0 w-px bg-gray-700 opacity-40"></div>
+                <div className="hidden lg:block absolute left-[60%] top-0 bottom-0 w-px bg-gray-700 opacity-40"></div>
+                <div className="hidden lg:block absolute left-[80%] top-0 bottom-0 w-px bg-gray-700 opacity-40"></div>
 
-                        {/* Bottom row - 2 members centered */}
-                        <div className="flex gap-6">
-                            {teamMembers.slice(4, 6).map((member, index) => (
-                                <div key={index + 4} className="flex flex-col items-center">
-                                    <div className="bg-white p-3 mb-3 shadow-lg">
-                                        <Image
-                                            src={member.image || "/placeholder.svg"}
-                                            alt={member.name}
-                                            width={140}
-                                            height={180}
-                                            className="object-cover"
-                                        />
+                <div className="max-w-7xl mx-auto relative z-10">
+                    {/* Main Heading */}
+                    <div className="text-center mb-20">
+                        <h1 className="font-avenir text-7xl md:text-8xl lg:text-[120px] font-bold">
+                            About HQ
+                        </h1>
+                    </div>
+
+                    {/* Team Grid */}
+                    <div className="flex justify-center mb-32">
+                        <div className="flex flex-col items-center gap-8">
+                            {/* Top row - 4 members */}
+                            <div className="flex gap-4">
+                                {teamMembers.slice(0, 4).map((member, index) => (
+                                    <div key={index} className="flex flex-col items-center">
+                                        <div
+                                            className="bg-white rounded-[4.88px] shadow-lg"
+                                            style={{ width: "220px", height: "310px" }}
+                                        >
+                                            <div className="p-2 h-full flex flex-col">
+                                                <Image
+                                                    src={member.image || "/placeholder.svg"}
+                                                    alt={member.name}
+                                                    width={180}
+                                                    height={200}
+                                                    className="object-cover rounded-[4.88px] flex-1"
+                                                    style={{ width: "100%", height: "200px" }}
+                                                />
+                                                <div className="mt-3 bg-white rounded-[4.88px] p-1 text-center">
+                                                    <p className="font-avenir text-sm font-medium text-black">{member.name}</p>
+                                                    <p className="font-avenir text-xs text-gray-600">@harry.hq</p>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <p className="font-avenir text-xs text-center font-light">{member.name}</p>
-                                </div>
-                            ))}
+                                ))}
+                            </div>
+
+                            {/* Bottom row - 2 members centered */}
+                            <div className="flex gap-4">
+                                {teamMembers.slice(4, 6).map((member, index) => (
+                                    <div key={index + 4} className="flex flex-col items-center">
+                                        <div
+                                            className="bg-white rounded-[4.88px] shadow-lg"
+                                            style={{ width: "220px", height: "310px" }}
+                                        >
+                                            <div className="p-2 h-full flex flex-col">
+                                                <Image
+                                                    src={member.image || "/placeholder.svg"}
+                                                    alt={member.name}
+                                                    width={180}
+                                                    height={200}
+                                                    className="object-cover rounded-[4.88px] flex-1"
+                                                    style={{ width: "100%", height: "200px" }}
+                                                />
+                                                <div className="mt-3 bg-white rounded-[4.88px] p-1 text-center">
+                                                    <p className="font-avenir text-sm font-medium text-black">{member.name}</p>
+                                                    <p className="font-avenir text-xs text-gray-600">@harry.hq</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                {/* Content Sections with 5 Vertical Lines */}
-                <div className="relative min-h-[800px]">
-                    {/* 4 Vertical divider lines creating 5 equal sections */}
-                    <div className="hidden lg:block absolute left-[20%] top-0 bottom-0 w-px bg-gray-700 opacity-40"></div>
-                    <div className="hidden lg:block absolute left-[40%] top-0 bottom-0 w-px bg-gray-700 opacity-40"></div>
-                    <div className="hidden lg:block absolute left-[60%] top-0 bottom-0 w-px bg-gray-700 opacity-40"></div>
-                    <div className="hidden lg:block absolute left-[80%] top-0 bottom-0 w-px bg-gray-700 opacity-40"></div>
 
                     {/* APPROACH Section */}
-                    <div className="relative">
+                    <div className="relative mb-32">
                         {/* APPROACH label aligned to 1st vertical line (20%) */}
                         <div className="absolute top-0 left-[20%] transform -translate-x-2">
                             <div className="text-[10px] font-avenir tracking-[0.3em] text-gray-400 uppercase font-medium">
@@ -79,7 +98,7 @@ export default function AboutHQ() {
                         </div>
 
                         {/* APPROACH content starting from 2nd vertical line (40%) */}
-                        <div className="absolute top-12 left-[40%] right-0 pr-8">
+                        <div className="ml-[40%] pr-8">
                             <h2 className="font-avenir text-4xl lg:text-[52px] font-light mb-8 leading-[0.95] tracking-tight max-w-2xl">
                                 Crafting <em className="italic font-light">Moments</em>
                                 <br />
@@ -103,16 +122,16 @@ export default function AboutHQ() {
                     </div>
 
                     {/* PHILOSOPHY Section */}
-                    <div className="relative">
+                    <div className="relative mb-32">
                         {/* PHILOSOPHY label aligned to 2nd vertical line (40%) */}
-                        <div className="absolute top-80 left-[40%] transform -translate-x-2">
+                        <div className="absolute top-0 left-[40%] transform -translate-x-2">
                             <div className="text-[10px] font-avenir tracking-[0.3em] text-gray-400 uppercase font-medium">
                                 PHILOSOPHY
                             </div>
                         </div>
 
                         {/* PHILOSOPHY content starting from 3rd vertical line (60%) */}
-                        <div className="absolute top-96 left-[60%] right-0 pr-8">
+                        <div className="ml-[60%] pr-8">
                             <h2 className="font-avenir text-4xl lg:text-[52px] font-light mb-8 leading-[0.95] tracking-tight max-w-xl">
                                 Purpose Driven
                                 <br />
@@ -135,7 +154,7 @@ export default function AboutHQ() {
                     </div>
 
                     {/* BEYOND EVENTS Section */}
-                    <div className="relative">
+                    <div className="relative mb-32">
                         {/* BEYOND EVENTS label in the rightmost column */}
                         <div className="absolute top-0 left-[80%] pl-4">
                             <div className="text-[10px] font-avenir tracking-[0.3em] text-gray-400 uppercase font-medium">
@@ -144,7 +163,7 @@ export default function AboutHQ() {
                         </div>
 
                         {/* BEYOND EVENTS content starting from 1st line in that section */}
-                        <div className="absolute top-12 left-[80%] right-0 pr-8">
+                        <div className="ml-[80%] pr-8">
                             <h2 className="font-avenir text-3xl lg:text-[42px] font-light mb-8 leading-[0.95] tracking-tight">
                                 How People &<br />
                                 Culture Inspire <em className="italic font-light">Our</em>
@@ -154,41 +173,39 @@ export default function AboutHQ() {
                             <div className="space-y-6 font-avenir text-[14px] leading-[1.6] text-white font-light">
                                 <p>
                                     We find inspiration in vibrant cultures, cinematic storytelling, and spontaneous moments of joy — all
-                                    of which fuel the energy We bring to every production.
-                                </p>
-                                <p>
-                                    For us, creativity isn't just a skill — it's a lifestyle built around connection, rhythm, and
-                                    experience.
+                                    of which fuel the energy We bring to every production. For us, creativity isn't just a skill — it's a
+                                    lifestyle built around connection, rhythm, and experience.
                                 </p>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                {/* Featured In Section */}
-                <div className="mt-32 pt-16 relative">
-                    {/* FEATURED IN label aligned to 2nd vertical line (40%) */}
-                    <div className="absolute top-0 left-[40%] transform -translate-x-2">
-                        <div className="text-[10px] font-avenir tracking-[0.3em] text-gray-400 uppercase font-medium">
-                            FEATURED IN
+                    {/* FEATURED IN Section */}
+                    <div className="relative mb-16">
+                        {/* FEATURED IN label aligned to 2nd vertical line (40%) */}
+                        <div className="absolute top-0 left-[40%] transform -translate-x-2">
+                            <div className="text-[10px] font-avenir tracking-[0.3em] text-gray-400 uppercase font-medium">
+                                FEATURED IN
+                            </div>
+                        </div>
+
+                        {/* FEATURED IN content starting from 3rd vertical line (60%) */}
+                        <div className="ml-[60%] pr-8">
+                            <p className="font-avenir text-[15px] text-white leading-[1.6] font-light max-w-md pt-8">
+                                Our work has been featured by Artwalk Colombo, Yamu, Ceylon Today, The Sunday Times, Roar Media, and
+                                more.
+                            </p>
                         </div>
                     </div>
 
-                    {/* FEATURED IN content starting from 3rd vertical line (60%) */}
-                    <div className="absolute top-8 left-[60%] right-0 pr-8">
-                        <p className="font-avenir text-[15px] text-white leading-[1.6] font-light max-w-md">
-                            Our work has been featured by Artwalk Colombo, Yamu, Ceylon Today, The Sunday Times, Roar Media, and more.
-                        </p>
-                    </div>
-
                     {/* Final tagline */}
-                    <div className="pt-24 text-center">
+                    <div className="text-center mt-16">
                         <p className="font-avenir text-2xl lg:text-3xl leading-tight font-light">
                             Proudly partnered with visionary brands to craft <em className="italic">extraordinary experiences</em>.
                         </p>
                     </div>
                 </div>
             </div>
-        </section>
+        </section >
     )
 }
