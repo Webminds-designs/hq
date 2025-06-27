@@ -8,6 +8,7 @@ import logo from "../asserts/logo.png";
 
 const Navbar = () => {
   const navRef = useRef<HTMLDivElement>(null);
+  const mobileMenuRef = useRef<HTMLDivElement>(null);
   const [menuOpen, setMenuOpen] = useState(false);
   const prevScrollY = useRef(0);
 
@@ -23,14 +24,14 @@ const Navbar = () => {
       const currentScrollY = window.scrollY;
 
       if (currentScrollY > prevScrollY.current && currentScrollY > 80) {
-        // Scrolling Down -> hide navbar
+        // Hide navbar
         gsap.to(navRef.current, {
           y: -100,
           duration: 0.4,
           ease: "power2.out",
         });
       } else {
-        // Scrolling Up -> show navbar
+        // Show navbar
         gsap.to(navRef.current, {
           y: 0,
           duration: 0.4,
@@ -45,6 +46,25 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    if (menuOpen && mobileMenuRef.current) {
+      // Animate menu open
+      gsap.fromTo(
+        mobileMenuRef.current,
+        { y: -20, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.3, ease: "power2.out" }
+      );
+    } else if (!menuOpen && mobileMenuRef.current) {
+      // Animate menu close
+      gsap.to(mobileMenuRef.current, {
+        y: -20,
+        opacity: 0,
+        duration: 0.2,
+        ease: "power2.in",
+      });
+    }
+  }, [menuOpen]);
+
   const toggleMenu = () => {
     setMenuOpen((prev) => !prev);
   };
@@ -52,7 +72,7 @@ const Navbar = () => {
   return (
     <header
       ref={navRef}
-      className="fixed top-0 left-0 w-full z-50 text-white px-6 py-4 "
+      className="fixed top-0 left-0 w-full z-50 text-white px-6 py-4"
     >
       <div className="max-w-8xl mx-auto flex justify-between items-center">
         {/* Logo */}
@@ -67,33 +87,17 @@ const Navbar = () => {
         </div>
 
         {/* Desktop Menu */}
-       <nav className="hidden md:flex gap-20 text-[12px] font-medium pr-18">
-  <a
-    href="#work"
-    className="relative transition after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 hover:after:w-full after:h-[1px] after:bg-white after:transition-all after:duration-300"
-  >
-    WORK
-  </a>
-  <a
-    href="#services"
-    className="relative  transition after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 hover:after:w-full after:h-[1px] after:bg-white after:transition-all after:duration-300"
-  >
-    SERVICES
-  </a>
-  <a
-    href="#about"
-    className="relative  transition after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 hover:after:w-full after:h-[1px] after:bg-white after:transition-all after:duration-300"
-  >
-    ABOUT
-  </a>
-  <a
-    href="#connect"
-    className="relative  transition after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 hover:after:w-full after:h-[1px] after:bg-white after:transition-all after:duration-300"
-  >
-    CONNECT
-  </a>
-</nav>
-
+        <nav className="hidden md:flex gap-20 text-[12px] font-medium pr-18">
+          {["work", "services", "about", "connect"].map((item) => (
+            <a
+              key={item}
+              href={`#${item}`}
+              className="relative transition after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 hover:after:w-full after:h-[1px] after:bg-white after:transition-all after:duration-300"
+            >
+              {item.toUpperCase()}
+            </a>
+          ))}
+        </nav>
 
         {/* Hamburger Icon */}
         <div className="md:hidden">
@@ -105,11 +109,20 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className="md:hidden mt-4 space-y-4 text-center animate-fadeInDown">
-          <a onClick={() => setMenuOpen(false)} href="#work" className="block text-sm font-medium hover:text-red-500">WORK</a>
-          <a onClick={() => setMenuOpen(false)} href="#services" className="block text-sm font-medium hover:text-red-500">SERVICES</a>
-          <a onClick={() => setMenuOpen(false)} href="#about" className="block text-sm font-medium hover:text-red-500">ABOUT</a>
-          <a onClick={() => setMenuOpen(false)} href="#connect" className="block text-sm font-medium hover:text-red-500">CONNECT</a>
+        <div
+          ref={mobileMenuRef}
+          className="md:hidden mt-4 space-y-4 text-center"
+        >
+          {["work", "services", "about", "connect"].map((item) => (
+            <a
+              key={item}
+              href={`#${item}`}
+              onClick={() => setMenuOpen(false)}
+              className="block text-sm font-medium hover:text-red-500"
+            >
+              {item.toUpperCase()}
+            </a>
+          ))}
         </div>
       )}
     </header>

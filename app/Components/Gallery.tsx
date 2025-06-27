@@ -100,14 +100,14 @@ const Gallery: React.FC = () => {
     <div>
       <div
         ref={galleryRef}
-        className="relative z-0 grid grid-cols-3 sm:grid-cols-3 md:grid-cols-3 gap-2 sm:gap-4 md:gap-6 px-4 sm:px-6 py-10 sm:py-14 md:py-16"
+        className="relative z-0 grid grid-cols-3 sm:grid-cols-3 md:grid-cols-3 gap-2 sm:gap-4 md:gap-6 px-4 sm:px-6 py-10 sm:py-14 md:py-16 "
       >
         {columns.map((col, colIndex) => (
           <div key={colIndex} className="flex flex-col gap-4 sm:gap-5 md:gap-6">
             {col.map((img, imgIndex) => (
               <div
                 key={imgIndex}
-                className={`relative w-full h-40 sm:h-64 md:h-70 rounded-xl overflow-hidden shadow-lg ${
+                className={`relative w-full h-28 sm:h-64 md:h-70 rounded-xl overflow-hidden shadow-lg ${
                   colIndex === 1 ? "parallax-img" : ""
                 }`}
               >

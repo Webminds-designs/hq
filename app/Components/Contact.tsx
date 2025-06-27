@@ -1,7 +1,7 @@
 "use client";
 
-import Image from "next/image";
-import bgimg from "../asserts/Rectangle 2030.webp";
+//import Image from "next/image";
+//import bgimg from "../asserts/Rectangle 2030.webp";
 import Footer from "./Footer";
 
 export default function Contact() {
@@ -10,17 +10,11 @@ export default function Contact() {
   };
 
   return (
-    <>
-      <main id="connect" className="font-avenir text-white min-h-screen flex flex-col items-center justify-center px-4 text-center  overflow-hidden">
+    <div className="bg-[linear-gradient(to_bottom,_transparent_10%,_rgba(230,1,7)_30%,_transparent_100%)]">
+      <main id="connect" className="font-avenir text-white min-h-screen flex flex-col items-center justify-center px-4 text-center  overflow-hidden  inset-0 -z-20 ">
         {/* Background Image */}
         <div className="absolute inset-0 -z-30 w-full h-full">
-          <Image
-            src={bgimg}
-            alt="Background"
-            fill
-            className="object-cover  object-center"
-            priority
-          />
+        
         </div>
 
         {/* Main Contact Text */}
@@ -47,6 +41,6 @@ export default function Contact() {
         </div>
       </main>
       <Footer />
-    </>
+    </div>
   );
 }
