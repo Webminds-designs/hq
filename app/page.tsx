@@ -1,3 +1,4 @@
+import Contact from "./Components/Contact";
 import Gallery from "./Components/Gallery";
 import Hero from "./Components/Hero";
 import Navbar from "./Components/Navbar";
@@ -36,6 +37,7 @@ export default function Home() {
 
 
       <Services />
+
       <div className="relative z-0">
         <AboutHQ />
       </div>
@@ -43,6 +45,12 @@ export default function Home() {
       <div className="relative z-10">
         <AnimatedLogos />
       </div>
+
+      <div className="relative z-0 mt-30">
+  <Contact />
+  
+  </div> 
+
     </div>
   );
 }

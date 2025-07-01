@@ -26,9 +26,9 @@ const services: Service[] = [
 
 export default function Services() {
   return (
-    <section className="min-h-screen md:pt-64">
+    <section id="services" className="min-h-screen md:pt-64 pt-44">
       <div className="text-center mb-10">
-        <h2 className="text-5xl md:text-8xl font-avenir font-bold text-center mb-12">
+        <h2 className="text-5xl md:text-[105px] font-avenir font-bold text-center mb-12">
           Services
         </h2>
       </div>
@@ -52,6 +52,10 @@ export default function Services() {
           </div>
         ))}
       </div>
+     <div className="relative  w-full">  
+</div>
+
+
     </section>
   );
 }
