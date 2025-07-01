@@ -23,7 +23,9 @@ const Hero = () => {
         <h1 className="text-3xl sm:text-4xl md:text-8xl font-avengenz leading-tight">
           HQ ENTERTAINMENT
         </h1>
-        <p className="font-avenir font-light text-sm sm:text-base md:text-[25px] mt-2 sm:mt-3 md:mt-2">
+
+        <p className="font-avenir font-light text-sm sm:text-base md:text-[25px] mt-2 sm:mt-3 md:mt-4">
+
           Igniting <em className="font-oldStandardTT italic">Unforgettable</em>{" "}
           moments Through Entertainment
         </p>
