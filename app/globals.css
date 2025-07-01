@@ -131,9 +131,11 @@
   font-family: "Old_Standard_TT", serif;
 }
 
+
 html{
    scroll-behavior: smooth;
 }
+
 /* Body base styles */
 body {
   background: #0f0f10;
