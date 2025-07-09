@@ -12,14 +12,14 @@ export default function AboutHQ() {
 
   return (
     <section className="bg-[#0f0f10] text-white px-4 sm:px-6 md:px-12 lg:px-16 relative">
-      <div>
+      <div id="about">
         {/* 4 Vertical divider lines creating 5 equal sections */}
         <div className="hidden lg:block absolute left-[20%] top-0 bottom-0 w-px bg-gray-700 opacity-40"></div>
         <div className="hidden lg:block absolute left-[40%] top-0 bottom-0 w-px bg-gray-700 opacity-40"></div>
         <div className="hidden lg:block absolute left-[60%] top-0 bottom-0 w-px bg-gray-700 opacity-40"></div>
         <div className="hidden lg:block absolute left-[80%] top-0 bottom-0 w-px bg-gray-700 opacity-40"></div>
 
-        <div className="max-w-7xl mx-auto relative z-10 mt-10">
+        <div className="max-w-7xl mx-auto relative z-10 mt-10 ">
           {/* Main Heading */}
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-5xl md:text-7xl lg:text-8xl font-avenir font-bold mb-8">
