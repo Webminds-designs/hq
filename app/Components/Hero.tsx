@@ -4,8 +4,8 @@ import WaveCanvas from "./WaveCanvas";
 
 const Hero = () => {
   return (
-    <div>
-      <div className="relative w-full h-screen overflow-hidden">
+    <div className="z-90">
+      <div className="relative w-full h-screen overflow-hidden ">
         {/* --- Middle Layer: Hero Image Overlay --- */}
         <div
           className="absolute inset-0 bg-cover bg-center z-0"
