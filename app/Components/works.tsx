@@ -5,6 +5,7 @@ import work1 from "../asserts/works/work1.webp";
 import work2 from "../asserts/works/work2.webp";
 import work3 from "../asserts/works/work3.webp";
 import work4 from "../asserts/works/work4.webp";
+import Link from "next/link";
 
 const works = [
   { title: "Forecoms", image: work1 },
@@ -16,7 +17,10 @@ const works = [
 
 export default function SelectedWorks() {
   return (
-    <div id="work" className="text-white py-12 px-6 md:px-20 pt-20 z-20 bg-[#0f0f10]">
+    <div
+      id="work"
+      className="text-white py-12 px-6 md:px-20 pt-20 z-20 bg-[#0f0f10]"
+    >
       <h2 className="text-5xl md:text-[106px] font-avenir font-bold text-center mb-12">
         Selected Works
       </h2>
@@ -27,7 +31,10 @@ export default function SelectedWorks() {
           const shouldCenter = isLastItem && isOdd;
 
           return (
-            <div
+            <Link
+              href={`/selectedWork/${work.title
+                .toLowerCase()
+                .replace(/\s+/g, "-")}`}
               key={index}
               className={`relative overflow-hidden rounded-2xl shadow-lg group ${
                 shouldCenter ? "sm:col-span-2 sm:justify-self-center" : ""
@@ -43,7 +50,7 @@ export default function SelectedWorks() {
               <div className="absolute bottom-4 left-4 text-white text-xl font-semibold bg-opacity-50 px-3 py-1 rounded">
                 {work.title}
               </div>
-            </div>
+            </Link>
           );
         })}
       </div>
