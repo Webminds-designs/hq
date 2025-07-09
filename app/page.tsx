@@ -30,27 +30,23 @@ export default function Home() {
         <SelectedWorks />
       </div>
 
-      <div className="relative z-0 mt-30">
+      <div className="relative z-20 mt-30">
         <Gallery />
       </div>
-
-
-
-      <Services />
-
+      <div className="relative z-20">
+        <Services />
+      </div>
       <div className="relative z-0">
         <AboutHQ />
       </div>
 
-      <div className="relative z-10">
+      <div className="relative z-20">
         <AnimatedLogos />
       </div>
 
       <div className="relative z-0 mt-30">
-  <Contact />
-  
-  </div> 
-
+        <Contact />
+      </div>
     </div>
   );
 }
