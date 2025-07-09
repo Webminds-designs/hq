@@ -24,31 +24,28 @@ export default function SelectedWorks() {
       <h2 className="text-5xl md:text-[106px] font-avenir font-bold text-center mb-12">
         Selected Works
       </h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-8xl mx-auto">
         {works.map((work, index) => {
-          const isLastItem = index === works.length - 1;
-          const isOdd = works.length % 2 !== 0;
-          const shouldCenter = isLastItem && isOdd;
-
           return (
             <Link
-              href={`/selectedWork/${work.title
-                .toLowerCase()
-                .replace(/\s+/g, "-")}`}
+              href="#"
               key={index}
-              className={`relative overflow-hidden rounded-2xl shadow-lg group ${
-                shouldCenter ? "sm:col-span-2 sm:justify-self-center" : ""
-              }`}
+              className="group relative overflow-hidden rounded-lg bg-gray-900 transition-all duration-300 hover:scale-105"
             >
-              <Image
-                src={work.image}
-                alt={work.title}
-                width={600}
-                height={400}
-                className="w-full h-96 object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
-              />
-              <div className="absolute bottom-4 left-4 text-white text-xl font-semibold bg-opacity-50 px-3 py-1 rounded">
-                {work.title}
+              <div className="relative w-full h-64 md:h-96">
+                <Image
+                  src={work.image}
+                  alt={work.title}
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover transition-transform duration-300 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-black/40 transition-opacity duration-300 group-hover:bg-black/60" />
+                <div className="absolute bottom-0 left-0 right-0 p-6">
+                  <h3 className="text-xl font-semibold text-white">
+                    {work.title}
+                  </h3>
+                </div>
               </div>
             </Link>
           );
