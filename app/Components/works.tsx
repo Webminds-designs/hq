@@ -19,13 +19,13 @@ type WorkItem = {
 
 // Array of work items
 const works: WorkItem[] = [
-  { title: "Forecoms", image: "/works/work1.webp" },
+  { title: "Forecoms", image: "/forecoms/fore1.webp" },
   {
     title: "Tribute To Legend Concerts",
-    image: "/works/work2.webp",
+    image: "/tribute/tr1.webp",
   },
-  { title: "Sadde Music Video", image: "/works/work3.webp" },
-  { title: "Helakuru", image: "/works/work4.webp" },
+  { title: "Sadde Music Video", image: "/sadee/sa1.webp" },
+  { title: "Helakuru", image: "/helakuru/he1.webp" },
   { title: "Spa Ceylon", image: "/spa/sap2.webp" }, // This is the work we want to center
 ];
 
