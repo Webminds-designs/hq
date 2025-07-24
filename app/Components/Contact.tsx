@@ -4,7 +4,7 @@ import Footer from "./Footer";
 
 export default function Contact() {
   const handleClick = () => {
-    alert("Quote request sent!");
+    window.location.href = "tel:0714320017";
   };
 
   return (

@@ -51,7 +51,7 @@ const Footer = () => {
         <p>LinkedIn, X, Instagram, YouTube</p>
         <p>
           <a href="https://webmindsdesigns.com/" target="_blank" rel="noopener noreferrer">
-            Designed by WebMinds
+            Designed by WebMinds Designs
           </a>
         </p>
       </div>
