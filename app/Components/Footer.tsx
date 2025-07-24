@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import logo from "../asserts/HQ sound LOGO wite 1.png";
+import logo from "../asserts/HQ_Logo.png";
 import Link from "next/link";
 
 const Footer = () => {

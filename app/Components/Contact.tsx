@@ -1,7 +1,5 @@
 "use client";
 
-//import Image from "next/image";
-//import bgimg from "../asserts/Rectangle 2030.webp";
 import Footer from "./Footer";
 
 export default function Contact() {
