@@ -2,12 +2,12 @@ import Image from "next/image";
 
 export default function AboutHQ() {
   const teamMembers = [
-    { name: "Ruvindu Parakrama", image: "/image.jpg" },
-    { name: "Ruvindu Parakrama", image: "/image (1).jpg" },
-    { name: "Ruvindu Parakrama", image: "/image (2).jpg" },
-    { name: "Ruvindu Parakrama", image: "/image (3).jpg" },
-    { name: "Ruvindu Parakrama", image: "/image (4).jpg" },
-    { name: "Ruvindu Parakrama", image: "/image (5).jpg" },
+    { name: "Ruvindu Parakrama", image: "/harry.jpg", designation: "Director Head of Production" },
+    { name: "Sethma Gunathilake", image: "/sethma.jpg", designation: "Senior Production Coordinator" },
+    { name: "Senura Alahakoon", image: "/senura.jpg", designation: "Head of Visual Arts, VJ & Graphic" },
+    { name: "Subhanu Weerasinghe", image: "/subhanu.jpg", designation: "Senior Sound Engineering" },
+    { name: "Yukthi Udara", image: "/udara.jpg", designation: "Senior 2D 3D Visualizer" },
+    { name: "Praveera Arosh", image: "/arosh.jpg", designation: "IT system developer" },
   ];
 
   return (
@@ -43,7 +43,7 @@ export default function AboutHQ() {
                             {member.name}
                           </p>
                           <p className="font-avenir text-xs text-gray-600">
-                            @harry.hq
+                            {member.designation}
                           </p>
                         </div>
                       </div>
@@ -71,7 +71,7 @@ export default function AboutHQ() {
                             {member.name}
                           </p>
                           <p className="font-avenir text-xs text-gray-600">
-                            @harry.hq
+                            {member.designation}
                           </p>
                         </div>
                       </div>
@@ -84,14 +84,11 @@ export default function AboutHQ() {
 
           {/* APPROACH Section */}
           <div className="relative mb-24 md:mb-36">
-            {/* APPROACH label aligned to 1st vertical line (20%) */}
             <div className="absolute top-0 left-[10.5%] transform -translate-x-1 hidden md:block">
               <div className="text-[12px] font-avenir text-white uppercase font-normal">
                 Approach
               </div>
             </div>
-
-            {/* APPROACH content */}
             <div className="md:ml-[38.5%] pr-0 md:pr-8">
               <h2 className="font-avenir text-2xl sm:text-3xl md:text-4xl lg:text-[45px] font-medium mb-8 leading-[1.1] tracking-tight max-w-2xl">
                 Crafting{" "}
@@ -132,14 +129,11 @@ export default function AboutHQ() {
 
           {/* PHILOSOPHY Section */}
           <div className="relative mb-20 md:mb-32">
-            {/* PHILOSOPHY label aligned to 2nd vertical line (40%) */}
             <div className="absolute top-0 left-[33%] transform -translate-x-2 hidden md:block">
               <div className="text-[12px] font-avenir text-white uppercase font-normal">
                 PHILOSOPHY
               </div>
             </div>
-
-            {/* PHILOSOPHY content starting from 3rd vertical line (60%) */}
             <div className="md:ml-[61.5%] pr-0 md:pr-8">
               <h2 className="font-avenir text-2xl sm:text-3xl md:text-4xl lg:text-[45px] font-medium mb-8 leading-[1.1] tracking-tight max-w-xl">
                 Purpose Driven
@@ -173,14 +167,11 @@ export default function AboutHQ() {
 
           {/* BEYOND EVENTS Section */}
           <div className="relative mb-20 md:mb-34">
-            {/* BEYOND EVENTS label in the rightmost column */}
             <div className="absolute top-0 left-[0.1%] hidden md:block">
               <div className="text-[12px] font-avenir text-white uppercase font-normal">
                 BEYOND EVENTS
               </div>
             </div>
-
-            {/* BEYOND EVENTS content starting from 1st line in that section */}
             <div className="md:ml-[15.5%] pr-0 md:pr-8">
               <h2 className="font-avenir text-2xl sm:text-3xl md:text-4xl lg:text-[45px] font-medium mb-8 leading-[1.1] tracking-tight max-w-xl">
                 How People &<br />
@@ -205,14 +196,11 @@ export default function AboutHQ() {
 
           {/* FEATURED IN Section */}
           <div className="relative mb-12 md:mb-16">
-            {/* FEATURED IN label aligned to 2nd vertical line (40%) */}
             <div className="absolute top-0 left-[33%] transform -translate-x-2 hidden md:block">
               <div className="text-[12px] font-avenir text-white uppercase font-normal">
                 FEATURED IN
               </div>
             </div>
-
-            {/* FEATURED IN content starting from 3rd vertical line (60%) */}
             <div className="md:ml-[61.5%] pr-0 md:pr-8">
               <p className="space-y-6 font-avenir text-base sm:text-lg md:text-[20px] leading-[1.6] text-white font-light max-w-sm">
                 Our work has been featured by Artwalk Colombo, Yamu, Ceylon
