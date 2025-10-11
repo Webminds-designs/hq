@@ -228,6 +228,7 @@ export default function AboutHQ() {
               </em>
             </p>
           </div>
+          
         </div>
       </div>
     </section>
