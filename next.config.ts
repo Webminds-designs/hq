@@ -1,9 +1,9 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  output: "export", // ✅ use static HTML export mode
+  // output: "export", 
   images: {
-    domains: ["images.unsplash.com"], // ✅ allow external image domains
+    domains: ["images.unsplash.com"],
   },
 };
 
