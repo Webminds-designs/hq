@@ -2,12 +2,12 @@ import Image from "next/image";
 
 export default function AboutHQ() {
   const teamMembers = [
-    { name: "Ruvindu Parakrama", image: "/harry.jpg", designation: "Director Head of Production" },
-    { name: "Sethma Gunathilake", image: "/sethma.jpg", designation: "Senior Production Coordinator" },
-    { name: "Senura Alahakoon", image: "/senura.jpg", designation: "Head of Visual Arts, VJ & Graphic" },
-    { name: "Subhanu Weerasinghe", image: "/subhanu.jpg", designation: "Senior Sound Engineering" },
-    { name: "Yukthi Udara", image: "/udara.jpg", designation: "Senior 2D 3D Visualizer" },
-    { name: "Praveera Arosh", image: "/arosh.jpg", designation: "IT system developer" },
+    { name: "Ruvindu Parakrama", image: "/harry.png", designation: "Director Head of Production" },
+    { name: "Sethma Gunathilake", image: "/sethma.png", designation: "Senior Production Coordinator" },
+    { name: "Senura Alahakoon", image: "/senura.png", designation: "Head of Visual Arts, VJ & Graphic" },
+    { name: "Subhanu Weerasinghe", image: "/subhanu.png", designation: "Senior Sound Engineering" },
+    { name: "Yukthi Udara", image: "/udara.png", designation: "Senior 2D 3D Visualizer" },
+    { name: "Praveera Arosh", image: "/arosh.png", designation: "IT system developer" },
   ];
 
   return (
@@ -28,7 +28,7 @@ export default function AboutHQ() {
               <div className="flex flex-wrap justify-center gap-4 md:gap-6 w-full">
                 {teamMembers.slice(0, 4).map((member, index) => (
                   <div key={index} className="flex flex-col items-center">
-                    <div className="bg-white rounded-[4.88px] shadow-lg w-[160px] xs:w-[180px] sm:w-[180px] md:w-[200px] lg:w-[220px] h-[230px] xs:h-[250px] sm:h-[260px] md:h-[280px] lg:h-[310px] transition-all">
+                    <div className="bg-none rounded-[4.88px] shadow-lg w-[160px] xs:w-[180px] sm:w-[180px] md:w-[200px] lg:w-[220px] h-[230px] xs:h-[250px] sm:h-[260px] md:h-[280px] lg:h-[310px] transition-all">
                       <div className="p-2 h-full flex flex-col">
                         <Image
                           src={member.image || "/placeholder.svg"}
@@ -38,11 +38,11 @@ export default function AboutHQ() {
                           className="object-cover rounded-[4.88px] flex-1"
                           style={{ width: "100%", height: "140px" }}
                         />
-                        <div className="mt-3 bg-white rounded-[4.88px] text-left px-1">
-                          <p className="font-avenir text-xs sm:text-sm font-medium text-black">
+                        <div className="mt-3 bg-none rounded-[4.88px] text-left px-1">
+                          <p className="font-avenir text-xs sm:text-sm font-medium text-white">
                             {member.name}
                           </p>
-                          <p className="font-avenir text-xs text-gray-600">
+                          <p className="font-avenir text-xs text-gray-500">
                             {member.designation}
                           </p>
                         </div>
@@ -56,7 +56,7 @@ export default function AboutHQ() {
               <div className="flex flex-wrap justify-center gap-4 md:gap-6 w-full">
                 {teamMembers.slice(4, 6).map((member, index) => (
                   <div key={index + 4} className="flex flex-col items-center">
-                    <div className="bg-white rounded-[4.88px] shadow-lg w-[160px] xs:w-[180px] sm:w-[180px] md:w-[200px] lg:w-[220px] h-[230px] xs:h-[250px] sm:h-[260px] md:h-[280px] lg:h-[310px] transition-all">
+                    <div className="bg-none rounded-[4.88px] shadow-lg w-[160px] xs:w-[180px] sm:w-[180px] md:w-[200px] lg:w-[220px] h-[230px] xs:h-[250px] sm:h-[260px] md:h-[280px] lg:h-[310px] transition-all">
                       <div className="p-2 h-full flex flex-col">
                         <Image
                           src={member.image || "/placeholder.svg"}
@@ -66,11 +66,11 @@ export default function AboutHQ() {
                           className="object-cover rounded-[4.88px] flex-1"
                           style={{ width: "100%", height: "140px" }}
                         />
-                        <div className="mt-3 bg-white rounded-[4.88px] text-left px-1">
-                          <p className="font-avenir text-xs sm:text-sm font-medium text-black">
+                        <div className="mt-3 bg-none rounded-[4.88px] text-left px-1">
+                          <p className="font-avenir text-xs sm:text-sm font-medium text-white">
                             {member.name}
                           </p>
-                          <p className="font-avenir text-xs text-gray-600">
+                          <p className="font-avenir text-xs text-gray-500">
                             {member.designation}
                           </p>
                         </div>
