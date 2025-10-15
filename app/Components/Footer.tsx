@@ -48,9 +48,53 @@ const Footer = () => {
         <p>
           <span className="text-lg font-bold">&copy;</span> HQENTERTAINTMENT 2025
         </p>
-        <p>LinkedIn, X, Instagram, YouTube</p>
+
+        {/* Social Links */}
+        <div className="flex gap-3">
+          <a
+            href="https://www.facebook.com/p/HQ-Entertainment-100086130378100/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:underline"
+          >
+            Facebook
+          </a>
+          <span>|</span>
+          <a
+            href="https://www.instagram.com/hq.entertainmentglobal/?hl=en"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:underline"
+          >
+            Instagram
+          </a>
+          <span>|</span>
+          <a
+            href="https://www.tiktok.com/@hqentertainment83?_t=ZS-90UROBFXZAL&_r=1"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:underline"
+          >
+            TikTok
+          </a>
+          {/* <span>|</span>
+          <a
+            href="https://www.youtube.com/@hqentertainment"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:underline"
+          >
+            YouTube
+          </a> */}
+        </div>
+
         <p>
-          <a href="https://webmindsdesigns.com/" target="_blank" rel="noopener noreferrer">
+          <a
+            href="https://webmindsdesigns.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:underline"
+          >
             Designed by WebMinds Designs
           </a>
         </p>

@@ -17,7 +17,7 @@ export default function FullEventProduction() {
       {/* Main Hero Image */}
       <div className="mb-10 h-128 overflow-hidden rounded-lg">
         <Image
-          src="/event-coverage-main.jpeg"
+          src="/event-coverage-main.jpg"
           alt="Full Event Production"
           width={1200}
           height={400}
@@ -51,7 +51,7 @@ export default function FullEventProduction() {
       <div className="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-8 mb-20">
         <div className="transform rotate-[-5deg] hover:rotate-0 transition-transform duration-300">
           <Image
-            src="/event-coverage1.jpeg"
+            src="/event-coverage1.jpg"
             alt="Event production setup 1"
             width={300}
             height={400}
@@ -60,7 +60,7 @@ export default function FullEventProduction() {
         </div>
         <div className="transform rotate-[2deg] hover:rotate-0 transition-transform duration-300">
           <Image
-            src="/event-coverage3.jpeg"
+            src="/event-coverage3.jpg"
             alt="Event production setup 2"
             width={300}
             height={400}
@@ -69,7 +69,7 @@ export default function FullEventProduction() {
         </div>
         <div className="transform rotate-[5deg] hover:rotate-0 transition-transform duration-300">
           <Image
-            src="/event-coverage2.jpeg"
+            src="/event-coverage2.jpg"
             alt="Event production setup 3"
             width={300}
             height={400}
