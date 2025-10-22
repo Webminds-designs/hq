@@ -10,6 +10,9 @@ export default function Component() {
     { src: "/Sirasa tv.png", alt: "Sirasa TV" },
     { src: "/Helakuru.png", alt: "Helakuru" },
     { src: "/AMW.png", alt: "AMW" },
+    { src: "/Daraz_logo.png", alt: "Daraz" },
+        { src: "/Toptul.png", alt: "TOPTUL" },
+
   ];
 
   // Second row logos (moves left)
@@ -18,6 +21,8 @@ export default function Component() {
     { src: "/Supreme_tv.png", alt: "Supreme TV" },
     { src: "/Pepper ST.png", alt: "Pepper ST" },
     { src: "/Foreconns-Canneries.png", alt: "Foreconns Canneries" },
+    { src: "/Helakuru.png", alt: "Helakuru" },
+
   ];
 
   return (

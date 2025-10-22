@@ -14,20 +14,23 @@ import Link from "next/link";
 // Define the structure for a work item
 type WorkItem = {
   title: string;
-  image: string; // Use StaticImageData for imported images
+  image: string;
+  link: string;
 };
 
 // Array of work items
 const works: WorkItem[] = [
-  { title: "Forecoms", image: "/forecoms/fore1.webp" },
+  { title: "Forecoms", image: "/forecoms/fore1.webp", link: "/works/forecoms" },
   {
     title: "Tribute To Legend Concerts",
     image: "/tribute/tr1.webp",
+    link: "/works/tribute",
   },
-  { title: "Sadde Music Video", image: "/sadee/sa1.webp" },
-  { title: "Helakuru", image: "/helakuru/he1.webp" },
-  { title: "Spa Ceylon", image: "/spa/sap2.webp" }, // This is the work we want to center
+  { title: "Sadde Music Video", image: "/sadee/sa1.webp", link: "/works/sadde" },
+  { title: "Helakuru", image: "/helakuru/he1.webp", link: "/works/helakuru" },
+  { title: "Spa Ceylon", image: "/spa/sap2.webp", link: "/works/spa" },
 ];
+
 
 export default function SelectedWorks() {
   return (
@@ -49,15 +52,13 @@ export default function SelectedWorks() {
 
           return (
             // Link wrapper for each work item, with hover effects
-            <Link
-              // Apply md:col-span-2 to the last item if there's an odd number of works
-              // This centers the last item in a 2-column grid on medium screens and up.
-              className={`group relative overflow-hidden rounded-lg bg-gray-900 transition-all duration-300 hover:scale-105 ${
-                isLastWork && isOddNumberOfWorks ? "md:col-span-2" : ""
-              }`}
-              href="#" // Placeholder link, replace with actual work page link if available
-              key={index}
-            >
+          <Link
+            href={work.link}
+            key={index}
+            className={`group relative overflow-hidden rounded-lg bg-gray-900 transition-all duration-300 hover:scale-105 ${
+              isLastWork && isOddNumberOfWorks ? "md:col-span-2" : ""
+            }`}
+          >
               <div className="relative w-full h-64 md:h-96">
                 {/* Image component with grayscale filter and hover effect */}
                 <Image
