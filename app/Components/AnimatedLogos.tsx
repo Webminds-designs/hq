@@ -10,8 +10,8 @@ export default function Component() {
     { src: "/Sirasa tv.png", alt: "Sirasa TV" },
     { src: "/Helakuru.png", alt: "Helakuru" },
     { src: "/AMW.png", alt: "AMW" },
-    { src: "/Daraz_logo.png", alt: "Daraz" },
-        { src: "/Toptul.png", alt: "TOPTUL" },
+    { src: "/daraz.png", alt: "Daraz" },
+    { src: "/Toptul.png", alt: "TOPTUL" },
 
   ];
 
