@@ -16,12 +16,12 @@ interface Service {
 }
 
 const services: Service[] = [
-  { title: "Pro Sound", image: service1, path: "/services/pro-sound" },
-  { title: "Event Lighting", image: service2, path: "/services/event-lighting" },
-  { title: "Stage Design", image: service3, path: "/services/stage-design" },
-  { title: "LED Walls", image: service4, path: "/services/led-walls" },
-  { title: "Full Event Production", image: service5, path: "/services/full-event-production" },
-  { title: "Video Production", image: service6, path: "/services/video-production" },
+  { title: "Pro Sound", image: service1, path: "/services/pro-sound.html" },
+  { title: "Event Lighting", image: service2, path: "/services/event-lighting.html" },
+  { title: "Stage Design", image: service3, path: "/services/stage-design.html" },
+  { title: "LED Walls", image: service4, path: "/services/led-walls.html" },
+  { title: "Full Event Production", image: service5, path: "/services/full-event-production.html" },
+  { title: "Video Production", image: service6, path: "/services/video-production.html" },
 ];
 
 export default function Services() {

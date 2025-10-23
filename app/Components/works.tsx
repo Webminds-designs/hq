@@ -20,15 +20,11 @@ type WorkItem = {
 
 // Array of work items
 const works: WorkItem[] = [
-  { title: "Forecoms", image: "/forecoms/fore1.webp", link: "/works/forecoms" },
-  {
-    title: "Tribute To Legend Concerts",
-    image: "/tribute/tr1.webp",
-    link: "/works/tribute",
-  },
-  { title: "Sadde Music Video", image: "/sadee/sa1.webp", link: "/works/sadde" },
-  { title: "Helakuru", image: "/helakuru/he1.webp", link: "/works/helakuru" },
-  { title: "Spa Ceylon", image: "/spa/sap2.webp", link: "/works/spa" },
+  { title: "Forecoms", image: "/forecoms/fore1.webp", link: "/works/forecoms.html" },
+  {title: "Tribute To Legend Concerts", image: "/tribute/tr1.webp", link: "/works/tribute.html",},
+  { title: "Sadde Music Video", image: "/sadee/sa1.webp", link: "/works/sadde.html" },
+  { title: "Helakuru", image: "/helakuru/he1.webp", link: "/works/helakuru.html" },
+  { title: "Spa Ceylon", image: "/spa/sap2.webp", link: "/works/spa.html" },
 ];
 
 
