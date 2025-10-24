@@ -49,8 +49,8 @@ const Footer = () => {
           <span className="text-lg font-bold">&copy;</span> HQENTERTAINTMENT 2025
         </p>
 
-        {/* Social Links */}
-        <div className="flex gap-3">
+        {/* Social + Contact Links */}
+        <div className="flex flex-wrap justify-center md:justify-start gap-3">
           <a
             href="https://www.facebook.com/p/HQ-Entertainment-100086130378100/"
             target="_blank"
@@ -77,15 +77,20 @@ const Footer = () => {
           >
             TikTok
           </a>
-          {/* <span>|</span>
+          <span>|</span>
           <a
-            href="https://www.youtube.com/@hqentertainment"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="tel:+94771234567"
             className="hover:underline"
           >
-            YouTube
-          </a> */}
+            +94 71 432 0017
+          </a>
+          <span>|</span>
+          <a
+            href="mailto:info@hqentertainmentsl.com"
+            className="hover:underline"
+          >
+            info@hqentertainmentsl.com
+          </a>
         </div>
 
         <p>

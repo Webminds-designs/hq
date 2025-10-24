@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function StageDesign() {
   return (
-    <section className="bg-black text-white px-6 md:px-12 lg:px-20 py-20 font-avenir">
+    <section className="z-20 text-white px-6 md:px-12 lg:px-20 py-20 font-avenir">
       {/* Title */}
       <div className="text-center mb-10">
         <h2 className="text-3xl md:text-5xl font-oldStandardTT italic text-gray-200 mb-2">
@@ -84,8 +84,8 @@ export default function StageDesign() {
       </div>
 
       <div className="text-center mt-12">
-        <Link href="/" className="text-blue-400 hover:underline text-sm md:text-base">
-          ← Back to Home
+        <Link href="/#services" className="text-blue-400 hover:underline text-sm md:text-base">
+          ← Back to Services
         </Link>
       </div>
     </section>

@@ -24,13 +24,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        <VerticalBeams />
+  <html lang="en">
+    <body
+      className={`${geistSans.variable} ${geistMono.variable} antialiased relative`}
+    >
+      <VerticalBeams />
+      <div className="relative z-10">
         {children}
-      </body>
-    </html>
+      </div>
+    </body>
+  </html>
+
   );
 }

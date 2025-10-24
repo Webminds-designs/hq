@@ -5,10 +5,10 @@ import Link from "next/link";
 
 export default function HelakuruAGM() {
   return (
-    <section className="bg-[#0f0f10] text-white min-h-screen px-6 md:px-20 py-16 font-avenir">
+    <section className="z-20 text-white min-h-screen px-6 md:px-20 py-16 font-avenir">
       {/* Back link */}
       <Link
-        href="/"
+        href="/#works"
         className="text-gray-400 hover:text-white mb-8 inline-block text-sm md:text-base"
       >
         ← Back to Works
@@ -90,15 +90,22 @@ export default function HelakuruAGM() {
           height={400}
           className="rounded-lg object-cover"
         />
+        <Image
+          src="/led4.jpg"
+          alt="Audience viewing AGM presentations"
+          width={600}
+          height={400}
+          className="rounded-lg object-cover"
+        />
       </div>
 
       {/* Back to Works */}
       <div className="text-center">
         <Link
-          href="/"
+          href="/#works"
           className="text-blue-400 hover:underline text-sm md:text-base"
         >
-          ← Back to Home
+          ← Back to Works
         </Link>
       </div>
     </section>

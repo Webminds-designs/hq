@@ -5,10 +5,10 @@ import Link from "next/link";
 
 export default function SpaCeylon() {
   return (
-    <section className="bg-[#0f0f10] text-white min-h-screen px-6 md:px-20 py-16 font-avenir">
+    <section className="z-20 text-white min-h-screen px-6 md:px-20 py-16 font-avenir">
       {/* Back link */}
       <Link
-        href="/"
+        href="/#works"
         className="text-gray-400 hover:text-white mb-8 inline-block text-sm md:text-base"
       >
         ← Back to Works
@@ -72,9 +72,17 @@ export default function SpaCeylon() {
 
       {/* Image grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 mb-20">
-        <Image
+        {/* <Image
           src="/spa/spa8.webp"
           alt="Spa Ceylon LED setup"
+          width={600}
+          height={400}
+          className="rounded-lg object-cover"
+        /> */}
+
+                <Image
+          src="/spa/spa9.webp"
+          alt="LED visuals and stage setup"
           width={600}
           height={400}
           className="rounded-lg object-cover"
@@ -93,29 +101,29 @@ export default function SpaCeylon() {
           height={400}
           className="rounded-lg object-cover"
         />
-        <Image
+        {/* <Image
           src="/spa/spa9.webp"
           alt="LED visuals and stage setup"
           width={600}
           height={400}
           className="rounded-lg object-cover"
-        />
-        {/* <Image
-          src="/spa/sc5.webp"
+        /> */}
+        <Image
+          src="/spa7.jpg"
           alt="Full immersive experience view"
           width={600}
           height={400}
-          className="rounded-lg object-cover md:col-span-2"
-        /> */}
+          className="rounded-lg object-cover"
+        />
       </div>
 
       {/* Back to Works */}
       <div className="text-center">
         <Link
-          href="/"
+          href="/#works"
           className="text-blue-400 hover:underline text-sm md:text-base"
         >
-          ← Back to Home
+          ← Back to Works
         </Link>
       </div>
     </section>

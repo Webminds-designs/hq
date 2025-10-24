@@ -18,7 +18,15 @@ type WorkItem = {
   link: string;
 };
 
-// Array of work items
+// // Array of work items
+// const works: WorkItem[] = [
+//   { title: "Forecoms", image: "/forecoms/fore1.webp", link: "/works/forecoms" },
+//   {title: "Tribute To Legend Concerts", image: "/tribute/tr1.webp", link: "/works/tribute",},
+//   { title: "Sadde Music Video", image: "/sadee/sa1.webp", link: "/works/sadde" },
+//   { title: "Helakuru", image: "/helakuru/he1.webp", link: "/works/helakuru" },
+//   { title: "Spa Ceylon", image: "/spa/sap2.webp", link: "/works/spa" },
+// ];
+
 const works: WorkItem[] = [
   { title: "Forecoms", image: "/forecoms/fore1.webp", link: "/works/forecoms.html" },
   {title: "Tribute To Legend Concerts", image: "/tribute/tr1.webp", link: "/works/tribute.html",},
@@ -32,7 +40,7 @@ export default function SelectedWorks() {
   return (
     <div
       id="work"
-      className="text-white py-12 px-6 md:px-20 pt-20 z-20 bg-[#0f0f10]"
+      className="text-white py-12 px-6 md:px-20 pt-20 z-20"
     >
       {/* Section Title */}
       <h2 className="text-5xl md:text-[106px] font-avenir font-bold text-center mb-12">

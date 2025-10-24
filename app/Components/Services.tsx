@@ -24,6 +24,16 @@ const services: Service[] = [
   { title: "Video Production", image: service6, path: "/services/video-production.html" },
 ];
 
+// const services: Service[] = [
+//   { title: "Pro Sound", image: service1, path: "/services/pro-sound" },
+//   { title: "Event Lighting", image: service2, path: "/services/event-lighting" },
+//   { title: "Stage Design", image: service3, path: "/services/stage-design" },
+//   { title: "LED Walls", image: service4, path: "/services/led-walls" },
+//   { title: "Full Event Production", image: service5, path: "/services/full-event-production" },
+//   { title: "Video Production", image: service6, path: "/services/video-production" },
+// ];
+
+
 export default function Services() {
   return (
     <section id="services" className="min-h-screen md:pt-64 pt-44">
