@@ -13,7 +13,9 @@ export default function Home() {
     <>
       {/* SEO */}
       <Head>
-        <title>HQ Entertainment | Live Events, Concerts & Event Production in Sri Lanka</title>
+        <title>
+          HQ Entertainment | Live Events, Concerts & Event Production in Sri Lanka
+        </title>
         <meta
           name="description"
           content="HQ Entertainment delivers world-class live event production, LED screen management, stage design, and immersive experiences for concerts, corporate events, and cultural festivals in Sri Lanka."
@@ -25,20 +27,36 @@ export default function Home() {
         <meta name="author" content="HQ Entertainment" />
 
         {/* Open Graph */}
-        <meta property="og:title" content="HQ Entertainment | Live Events & Productions" />
-        <meta property="og:description" content="Delivering immersive event experiences, LED screen management, and creative stage design across Sri Lanka." />
+        <meta
+          property="og:title"
+          content="HQ Entertainment | Live Events & Productions"
+        />
+        <meta
+          property="og:description"
+          content="Delivering immersive event experiences, LED screen management, and creative stage design across Sri Lanka."
+        />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://hqentertainmentsl.com/" />
         <meta property="og:image" content="https://hqentertainmentsl.com/og-image.jpg" />
 
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="HQ Entertainment | Live Events & Productions" />
-        <meta name="twitter:description" content="Delivering immersive event experiences, LED screen management, and creative stage design across Sri Lanka." />
+        <meta
+          name="twitter:title"
+          content="HQ Entertainment | Live Events & Productions"
+        />
+        <meta
+          name="twitter:description"
+          content="Delivering immersive event experiences, LED screen management, and creative stage design across Sri Lanka."
+        />
         <meta name="twitter:image" content="https://hqentertainmentsl.com/og-image.jpg" />
 
         {/* Canonical */}
         <link rel="canonical" href="https://hqentertainmentsl.com/" />
+
+        {/* ✅ Favicon */}
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" type="image/png" href="/favicon.png" />
 
         {/* JSON-LD Structured Data */}
         <script
@@ -61,7 +79,7 @@ export default function Home() {
                 "telephone": "+94714320017",
                 "contactType": "customer service"
               }
-            })
+            }),
           }}
         />
       </Head>
