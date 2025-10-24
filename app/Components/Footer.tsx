@@ -78,13 +78,13 @@ const Footer = () => {
             TikTok
           </a>
           <span>|</span>
-          <a
+          {/* <a
             href="tel:+94771234567"
             className="hover:underline"
           >
             +94 71 432 0017
           </a>
-          <span>|</span>
+          <span>|</span> */}
           <a
             href="mailto:info@hqentertainmentsl.com"
             className="hover:underline"
